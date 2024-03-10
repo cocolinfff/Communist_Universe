@@ -1,0 +1,96 @@
+namespace = communist
+
+country_event = {
+	id = communist.1
+	title = communist.1.name
+	desc = communist.1.desc
+	picture = GFX_evt_communist_five_year_plan
+	is_triggered_only = yes
+	trigger = {
+		is_communist_country = yes
+	}
+	option = {
+		name = communist.1.a
+		hidden_effect = {
+			add_modifier = {
+				modifier = communist_modifier_five_year_plan_energy
+				days = 1800
+			}
+		country_event = { id = communist.1 days = 1800 }
+		}
+	}
+	option = {
+		name = communist.1.b
+		hidden_effect = {
+			add_modifier = {
+				modifier = communist_modifier_five_year_plan_minerals
+				days = 1800
+			}
+		country_event = { id = communist.1 days = 1800 }
+		}
+	}
+	option = {
+		name = communist.1.c
+		hidden_effect = {
+			add_modifier = {
+				modifier = communist_modifier_five_year_plan_foods
+				days = 1800
+			}
+		country_event = { id = communist.1 days = 1800 }
+		}
+	}
+	option = {
+		name = communist.1.d
+		hidden_effect = {
+			add_modifier = {
+				modifier = communist_modifier_five_year_plan_consumer_goods
+				days = 1800
+			}
+		country_event = { id = communist.1 days = 1800 }
+		}
+	}
+	option = {
+		name = communist.1.e
+		hidden_effect = {
+			add_modifier = {
+				modifier = communist_modifier_five_year_plan_alloys
+				days = 1800
+			}
+		country_event = { id = communist.1 days = 1800 }
+		}
+	}
+}
+
+country_event = {
+	id = communist.2
+	hide_window = yes
+	fire_only_once = yes
+	location = root
+
+	trigger = {
+		is_communist_country = yes
+	}
+
+	immediate = {
+		save_global_event_target_as = communist_country	
+	}
+}
+
+country_event = {
+	id = communist.3
+	title = communist.3.name
+	desc = communist.3.desc
+	picture = GFX_evt_communist_federation_created
+	show_sound = event_communist_international_call
+	is_triggered_only = yes
+
+	option = {
+		name = "communist.3.a"
+		owner = {
+			add_resource = { 
+				influence = 300
+				unity = 20000
+			}
+		}
+	}
+}

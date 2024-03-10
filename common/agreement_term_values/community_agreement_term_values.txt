@@ -1,0 +1,17 @@
+
+specialist_wsg_jurisdiction = {
+	term = specialist_type
+	triggered_loyalty_change = {
+		trigger = {
+			target = { has_authority = auth_democratic_centralism  }
+		}
+		loyalty_change = 25
+	}
+
+	activate_effect = {
+		convert_to_specialist = specialist_wsg_jurisdiction
+	}
+	potential = {
+		agreement_preset = preset_wsg_jurisdiction_subject
+	}
+}

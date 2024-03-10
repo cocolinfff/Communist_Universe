@@ -1,0 +1,414 @@
+namespace = operation_communist_revolution
+
+espionage_operation_event = {
+	id = operation_communist_revolution.1
+	title = operation_communist_revolution.1.name
+	desc = operation_communist_revolution.1.desc
+	picture = GFX_evt_acquire_asset
+	show_sound = event_spymaster
+	espionage_operation = yes
+	is_triggered_only = yes
+	immediate = { set_espionage_operation_progress_locked = yes }
+	after = { set_espionage_operation_progress_locked = no }
+	option = {
+		name = ACKNOWLEDGED
+		target = { random_pop_change_ethic_to_egalitarian = yes }
+	}
+}
+
+espionage_operation_event = {
+	id = operation_communist_revolution.2
+	title = operation_communist_revolution.2.name
+	desc = operation_communist_revolution.2.desc
+	picture = GFX_evt_spy_network
+	show_sound = event_spymaster
+	espionage_operation = yes
+	is_triggered_only = yes
+	immediate = { set_espionage_operation_progress_locked = yes }
+	after = { set_espionage_operation_progress_locked = no }
+	option = {
+		name = ACKNOWLEDGED
+		target = { random_pop_change_ethic_to_egalitarian = yes }
+	}
+}
+
+espionage_operation_event = {
+	id = operation_communist_revolution.3
+	title = operation_communist_revolution.3.name
+	desc = operation_communist_revolution.3.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_spymaster
+	espionage_operation = yes
+	is_triggered_only = yes
+	immediate = { set_espionage_operation_progress_locked = yes }
+	after = { set_espionage_operation_progress_locked = no }
+	option = {
+		name = LAUNCH_OPERATION
+		target = { random_pop_change_ethic_to_egalitarian = yes }
+		hidden_effect = { espionage_operation_event = { id = operation_communist_revolution.4 } }
+	}
+}
+
+espionage_operation_event = {
+	id = operation_communist_revolution.4
+	title = operation_communist_revolution.4.name
+	desc = operation_communist_revolution.4.desc
+	picture = GFX_evt_acquire_asset
+	location = target.capital_scope
+	show_sound = event_espionage_concluded
+	is_triggered_only = yes
+	option = {
+		name = operation_communist_revolution.4.a
+		hidden_effect = { target = { country_event = { id = operation_communist_revolution.5 } } }
+	}
+	after = { destroy_espionage_operation = this }
+}
+country_event = {
+	id = operation_communist_revolution.5
+	title = operation_communist_revolution.5.name
+	desc = operation_communist_revolution.5.desc
+	picture = GFX_evt_open_revolt
+	show_sound = event_air_raid_siren
+	is_triggered_only = yes
+	immediate = {
+		add_modifier = { modifier = communist_revolution_are_being_considered years = 1 }
+		every_owned_pop = {
+			limit = { NOT = { pop_has_ethic = ethic_egalitarian } }
+			random_list = {
+				1 = { pop_change_ethic = "ethic_egalitarian" }
+			}
+		}
+	}
+	option = {#忽略
+		name = operation_communist_revolution.5.a
+		trigger = { owner = { is_communist_country = no } }
+		hidden_effect = { country_event = { id = operation_communist_revolution.6 } }
+		ai_chance = { factor = 10 }
+	}
+	option = {#镇压
+		name = operation_communist_revolution.5.b
+		trigger = { owner = { is_communist_country = no } }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 600 }
+			resource_stockpile_compare = { resource = influence value >= 150 }
+		}
+		add_resource = { energy = -600 }
+		add_resource = { influence = -150 }
+		target = { save_event_target_as = target_country }
+		hidden_effect = { 
+			random_list = {
+				50 = {
+					country_event = { id = operation_communist_revolution.7 } 
+				}
+				50 = {
+					country_event = { id = operation_communist_revolution.8 days = 60 } 
+				}
+			}
+		}
+		ai_chance = { factor = 90 }
+	}
+	option = {#接纳
+		name = operation_communist_revolution.5.c
+		trigger = { owner = { is_communist_country = no } }
+		build_communist_country = yes
+		allow = { resource_stockpile_compare = { resource = influence value >= 50 } }
+		add_resource = { influence = -50 }
+		ai_chance = { factor = 5 }
+	}
+	option = {#我们已经是社会主义国家了
+		name = operation_communist_revolution.5.d
+		trigger = { owner = { is_communist_country = yes } }
+		ai_chance = { factor = 5 }
+	}
+}
+
+#忽略罢工之后这个国家的阶级矛盾将会迅速激化
+country_event = {
+	id = operation_communist_revolution.6
+	title = operation_communist_revolution.6.name
+	desc = operation_communist_revolution.6.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_spymaster
+	is_triggered_only = yes
+	option = {
+		name = operation_communist_revolution.6.a
+		hidden_effect = { add_modifier = { modifier = communist_movement_is_developing years = 3 } }
+	}
+}
+
+#镇压罢工之后这个国家的工人运动将会陷入低谷
+country_event = {
+	id = operation_communist_revolution.7
+	title = operation_communist_revolution.7.name
+	desc = operation_communist_revolution.7.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_spymaster
+	is_triggered_only = yes
+	option = {
+		name = operation_communist_revolution.7.a
+		hidden_effect = { add_modifier = { modifier = communist_revolution_was_failed years = 3 } }
+	}
+}
+
+#被镇压后随机星球爆发革命建立社会主义国家
+country_event = {
+	id = operation_communist_revolution.8
+	title = operation_communist_revolution.8.name
+	desc = operation_communist_revolution.8.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_spymaster
+	is_triggered_only = yes
+	option = {
+		name = operation_communist_revolution.8.a
+		hidden_effect = { 
+			random_owned_planet = {
+				limit = {
+					NOT = {
+						has_modifier = resort_colony
+						has_modifier = penal_colony
+						has_modifier = slave_colony
+						is_capital = yes
+					}
+				}
+				#建立公社
+				create_country = {
+					type = default
+					name = random
+					ethos = {
+						ethic = ethic_fanatic_egalitarian
+						ethic = ethic_materialist
+					}
+					authority = auth_democratic_centralism
+					civics = civic_soviet
+					civics = civic_planned_economy
+					origin = origin_communist_revolution
+					name_list = "COMMUNIST"
+					flag = {
+						icon={
+							category="communist"
+							file="communist_9.dds"
+						}
+						background={
+							category="backgrounds"
+							file="circle.dds"
+						}
+						colors={
+							"red"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						prev.solar_system.starbase = {
+							set_owner = prev
+						}
+						set_subject_of = {
+							who = root.owner
+						}
+						establish_communications_no_message = root
+						save_event_target_as = communist_revolution_revolutionary
+						country_event = { id = operation_communist_revolution.11 } # setup happens here now
+						country_event = { id = operation_communist_revolution.10 days = 30 } # setup happens here now
+					}
+				}
+			}
+			#evert_country = {
+				#limit = { is_communist_country = yes }
+				#country_event = { id = operation_communist_revolution.9 days = 10 }
+			#}
+		}
+	}
+}
+
+#革命爆发后的请求支援
+country_event = {
+	id = operation_communist_revolution.9
+	title = "TRANSMISSION"
+	desc = "operation_communist_revolution.9.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:communist_revolution_revolutionary
+		room = event_target:communist_revolution_revolutionary
+	}
+
+	option = {
+		name = "operation_communist_revolution.9.a"
+	}
+}
+
+#国际纵队到达
+country_event = {
+	id = operation_communist_revolution.10
+	title = "TRANSMISSION"
+	desc = "operation_communist_revolution.10.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:communist_revolution_revolutionary
+		room = event_target:communist_revolution_revolutionary
+	}
+
+	option = {
+		name = "operation_communist_revolution.10.a"
+		create_fleet = {
+			name = "NAME_international_fleet"
+			settings = {
+				spawn_debris = no
+			}				
+			effect = {
+				set_owner = prev
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "NAME_communist_proletarian_destoryer"
+					}
+				}	
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "NAME_communist_proletarian_Cruiser"
+					}
+				}	
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "NAME_communist_proletarian_battleship"
+					}
+				}	
+				set_location = {
+					target = root.capital_scope
+					distance = 0
+					angle = 0
+				}
+			}
+		}
+	}
+}
+
+#社会主义革命国家初始化
+country_event = {
+	id = operation_communist_revolution.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { host_has_dlc = "Synthetic Dawn Story Pack" }
+
+	immediate = {
+
+		save_event_target_as = communist_revolution_revolutionary
+		from.owner = { save_event_target_as = communist_revolution_originator }
+		# 添加初始资源
+		add_resource = {
+			energy = 200000
+			minerals = 20000
+			influence = 800
+			alloys = 100000
+			food = 10000 #just in case
+			consumer_goods = 5000 #just in case
+			rare_crystals = 1000
+			volatile_motes = 1000
+			exotic_gases = 1000
+			sr_dark_matter = 100
+		}
+		add_500_unity_per_year_passed = yes # scripted effect
+
+		#获得科技
+		copy_techs_from = {
+			target = event_target:communist_revolution_originator
+		}
+
+		#获得探测
+		every_galaxy_planet = {
+			limit = {
+				is_surveyed = {
+					who = event_target:communist_revolution_originator
+					status = yes
+				}
+			}
+			set_surveyed = {
+				surveyed = yes
+				surveyor = root
+			}
+		}
+
+		#与原生国家的战争
+		declare_war = {
+			target = event_target:communist_revolution_originator
+			name = {
+				key = "NAME_communist_revolution_war"
+				variable_string = "This.MainDefender.GetAdj"
+			}
+			attacker_war_goal = "wg_communist_output_revolution"
+		}
+
+		#science
+		create_fleet = {
+			effect = {
+				set_owner = root
+
+				create_ship = {
+					name = random
+					random_existing_design = science
+				}
+
+				set_fleet_stance = evasive
+				set_location = root.capital_scope
+
+				owner = {
+					create_leader = {
+						class = scientist
+						sub_type = survey
+						name = random
+						species = owner_main_species
+					}
+				}
+				set_leader = last_created_leader
+			}
+		}
+
+		#constructor
+		create_fleet = {
+			effect = {
+				set_owner = root
+
+				create_ship = {
+					name = random
+					random_existing_design = constructor
+				}
+
+				set_fleet_stance = evasive
+				set_location = root.capital_scope
+			}
+		}
+
+		every_controlled_fleet = {
+			#limit = { event_locked = yes }
+			set_event_locked = no
+		}
+		observer_event = { id = operation_communist_revolution.12 }
+	}
+}
+
+observer_event = {
+	id = operation_communist_revolution.12
+	title = operation_communist_revolution.12.name
+	desc = operation_communist_revolution.12.desc
+	picture = GFX_evt_organic_oppression
+	location = fromfrom
+	show_sound = event_robo
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}

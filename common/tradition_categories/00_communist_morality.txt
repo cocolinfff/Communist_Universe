@@ -1,0 +1,24 @@
+tradition_communist_morality = {
+	tree_template = "tree_21_11"
+	adoption_bonus = "tr_communist_morality_adopt"
+	finish_bonus = "tr_communist_morality_finish"
+	traditions = {
+		"tr_communist_morality_1"
+		"tr_communist_morality_2"
+		"tr_communist_morality_3"
+		"tr_communist_morality_4"
+		"tr_communist_morality_5"
+	}
+
+	potential = {
+		is_communist_country = yes
+	}
+
+	ai_weight = {
+		factor = 7.5
+		modifier = {
+			factor = 2
+			is_communist_country = yes
+		}
+	}
+}

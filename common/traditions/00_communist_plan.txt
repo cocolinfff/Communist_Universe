@@ -1,0 +1,82 @@
+tr_communist_plan_adopt = {
+	modifier = {
+		planet_jobs_upkeep_mult = -0.2
+	}
+}
+
+tr_communist_plan_finish = {
+	modifier = {
+		planet_jobs_produces_mult = 0.15
+		ascension_perks_add = 1
+	}
+}
+
+tr_communist_plan_1 = {
+	modifier = {
+		local_trade_protection_add = 5
+		starbase_trade_collection_range_add = 1
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_communist_plan_2 = {
+	possible = {
+		has_tradition = tr_communist_plan_1
+	}
+	modifier = {
+		station_gatherers_produces_mult = 0.2
+		station_researchers_produces_mult = 0.2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_plan_3 = {
+
+	custom_tooltip = tr_communist_plan_3_desc
+	modifier = {
+		country_energy_produces_mult = 0.2
+		country_minerals_produces_mult = 0.2
+		country_food_produces_mult = 0.2
+		country_consumer_goods_produces_mult = 0.2
+		country_alloys_produces_mult = 0.2
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_communist_plan_4 = {
+	possible = {
+		has_tradition = tr_communist_plan_3
+	}
+
+	modifier = {
+		country_volatile_motes_produces_mult = 0.25
+		country_exotic_gases_produces_mult = 0.25
+		country_rare_crystals_produces_mult = 0.25
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_plan_5 = {
+	possible = {
+		has_tradition = tr_communist_plan_3
+	}
+
+	modifier = {
+		country_trade_fee = -0.10
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

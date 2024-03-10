@@ -1,0 +1,32 @@
+gov_communist_leninism = {
+	ruler_title = PRESCRIPTED_ruler_title_communist_prime
+	ruler_title_female = PRESCRIPTED_ruler_communist_prime
+	possible = {
+		OR = {
+			has_civic = civic_soviet
+			has_civic = civic_communist_soviet
+			has_authority =  auth_democratic_centralism
+		}
+	}
+
+	weight = {
+		base = 1000
+	}
+}
+
+#gov_ai_communist_leninism = {
+	#ruler_title = PRESCRIPTED_ruler_title_communist_prime
+	#ruler_title_female = PRESCRIPTED_ruler_communist_prime
+	#possible = {
+		#has_civic = civic_soviet
+		#has_civic = civic_planned_economy
+		#is_ai = yes
+	#}
+
+	#weight = {
+	#	base = 9999
+	#}
+#}
+
+
+

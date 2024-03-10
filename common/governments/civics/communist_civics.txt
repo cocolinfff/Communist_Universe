@@ -1,0 +1,133 @@
+#先锋队体制
+civic_soviet = {
+	icon = "gfx/interface/icons/governments/civics/soviet.dds"
+	potential = {
+		authority = {
+			NOT = {
+				value = auth_direct_democratic
+				value = auth_democratic
+				value = auth_oligarchic
+			}
+		}
+	}
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_communist_soviet
+			}
+		}
+	}
+	random_weight = { base = 1000 }
+	modifier = {
+		pop_factions_produces_mult = 0.5
+		pop_citizen_happiness = 0.05
+	}
+}
+
+#委员会共产主义
+#civic_communist_soviet = {
+#	icon = "gfx/interface/icons/governments/civics/soviet.dds"
+#	potential = { authority = { value = auth_democratic_centralism } }
+#	possible = {
+#		ethics={
+#			value = ethic_fanatic_egalitarian
+#			value = ethic_materialist
+#		}
+#		civics = {
+	#		NOT = {
+#				value = civic_soviet
+#			}
+#		}
+	#}
+#	random_weight = { base = 1000 }
+#	modifier = {
+#		pop_factions_produces_mult = 1.0
+#		pop_citizen_happiness = 0.15
+#	}
+#}
+
+#指令性计划经济
+civic_planned_economy = {
+	icon = "gfx/interface/icons/governments/civics/planned_economy.dds"
+	potential = { authority = {value = auth_democratic_centralism } }
+	possible = {
+		CIVICS = {
+			OR = {
+				value = civic_soviet
+				value = civic_communist_soviet
+			}
+		}
+	}
+	random_weight = { base = 1000 }
+	modifier = {
+		planet_structures_cost_mult = -0.2
+		planet_building_build_speed_mult = 0.2
+	}
+}
+
+#红军
+civic_red_army = {
+	icon = "gfx/interface/icons/governments/civics/red_army.dds"
+	potential = { authority = {value = auth_democratic_centralism } }
+	possible = {
+		ethics={
+			value = ethic_fanatic_egalitarian
+			value = ethic_materialist
+		}		
+		civics = {
+			OR = {
+				value = civic_soviet
+				value = civic_communist_soviet
+			}
+		} 
+	}
+	random_weight = { base = 500 }
+	modifier = {
+		ship_home_territory_fire_rate_mult = 0.2
+		country_war_exhaustion_mult = -0.5
+	}
+}
+
+#国家科学院
+civic_sciences_academy = {
+	icon = "gfx/interface/icons/governments/civics/sciences_academy.dds"
+	potential = { authority = {value = auth_democratic_centralism }  }
+	possible = {
+		ethics={
+			value = ethic_fanatic_egalitarian
+			value = ethic_materialist
+		}		
+		civics = {
+			OR = {
+				value = civic_soviet
+				value = civic_communist_soviet
+			}
+		} 
+	}
+	random_weight = { base = 500 }
+	modifier = {
+		all_technology_research_speed = 0.1
+		num_tech_alternatives_add = 1
+	}
+}
+civic_sciences_academy = {
+	icon = "gfx/interface/icons/governments/civics/sciences_academy.dds"
+	potential = { authority = {value = auth_democratic_centralism }  }
+	possible = {
+		ethics={
+			value = ethic_fanatic_egalitarian
+			value = ethic_materialist
+		}
+		civics = {
+			OR = {
+				value = civic_soviet
+				value = civic_communist_soviet
+			}
+		}
+	}
+	random_weight = { base = 500 }
+	modifier = {
+		all_technology_research_speed = 0.1
+		num_tech_alternatives_add = 1
+	}
+}

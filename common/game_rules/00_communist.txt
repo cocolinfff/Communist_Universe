@@ -1,0 +1,30 @@
+#公有制企业
+can_build_branch_offices = {
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_NOT_MEGACORP
+			#_|共产星际|
+			AND = {
+				OR = {
+					has_authority = auth_democratic_centralism
+					AND = {
+						has_active_tradition = tr_communist_plan_3
+					}
+				}
+			}
+	}
+}
+
+#开设分部
+
+an_build_branch_office_on_planet = {
+	AND = {
+		owner = {
+			is_same_value = root    # <建造者>和<接受者>相同
+			OR = {
+				AND = {
+					has_authority = auth_democratic_centralism
+				}
+			}
+		}
+	}
+}

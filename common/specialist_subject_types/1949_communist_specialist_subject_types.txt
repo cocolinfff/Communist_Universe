@@ -1,0 +1,43 @@
+specialist_cmsl = {
+	icon = "GFX_diplomacy_specialist_subject_cmsl"
+	icon_large = "GFX_diplomacy_specialist_subject_cmsl_large"
+	preferred_ethic = ethic_materialist
+	base_conversion_time = 5
+
+	on_progress_complete = {
+	}
+
+	levels = {
+		# Level 1
+		{
+			experience_needed_for_next_level = 600
+			perks = {
+				cmsl_1_modifier
+				cmsl_1_modifier_2
+				cmsl_1_modifier_3
+				cmsl_1_modifier_4
+			}
+		}
+		# Level 2
+		{
+			experience_needed_for_next_level = 1200
+			perks = {
+				cmsl_2_modifier
+				cmsl_2_modifier_2
+				cmsl_2_modifier_3
+				cmsl_2_modifier_4
+			}
+		}
+		# Level 3
+		{
+			perks = {
+				cmsl_3_modifier
+				cmsl_3_modifier_2
+				cmsl_3_modifier_3
+				cmsl_3_modifier_4
+			}
+		}
+	}
+}
+
+

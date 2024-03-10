@@ -1,0 +1,19 @@
+namespace = communist
+#开局初始化
+country_event = {
+    id = communist_start.0
+    title = communist_start.0.name
+    desc =  communist_start.0.desc
+    picture =
+    location = root
+    show_sound = select_click
+
+    trigger = {
+        is_communist_country = yes
+    }
+
+    option = {
+        name = communist_setting_complete_option
+        set_country_type = communist_default
+    }
+}

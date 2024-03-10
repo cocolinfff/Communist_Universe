@@ -1,0 +1,8 @@
+is_communist_country = {
+	OR = {
+		has_government = gov_communist_leninism
+		has_government = gov_ai_communist_leninism
+		has_civic = civic_soviet
+		has_authority =  auth_democratic_centralism
+	}
+}

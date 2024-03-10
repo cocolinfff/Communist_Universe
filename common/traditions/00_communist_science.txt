@@ -1,0 +1,81 @@
+
+tr_communist_science_adopt = {
+	modifier = {
+		science_ship_survey_speed = 0.5
+		shipclass_science_ship_disengage_mult = 0.5
+	}
+}
+
+tr_communist_science_finish = {
+	modifier = {
+		all_technology_research_speed = 0.1
+		num_tech_alternatives_add = 1
+		ascension_perks_add = 1
+	}
+}
+
+tr_communist_science_1 = {
+	modifier = {
+		ship_anomaly_research_speed_mult = 0.2
+		ship_anomaly_generation_chance_mult = 0.2
+	}
+
+	ai_weight = {
+		factor = 5000	# AI should prefer this one first, more useful early
+	}
+}
+
+tr_communist_science_2 = {
+	possible = {
+		has_tradition = tr_communist_science_1
+	}
+
+	modifier = {
+		ship_archaeological_site_clues_add = 3
+		ship_archaeological_site_excavation_speed_mult = 0.1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_science_3 = {
+	modifier = {
+		country_leader_pool_size = 2
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_communist_science_4 = {
+	possible = {
+		has_tradition = tr_communist_science_3
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+		scientist_skill_levels = 3
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_science_5 = {
+	possible = {
+		has_tradition = tr_communist_science_4
+	}
+
+	modifier = {
+		planet_researchers_produces_mult = 0.2
+		planet_researchers_upkeep_mult = -0.20
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

@@ -1,0 +1,25 @@
+tradition_communist_spy = {
+	tree_template = "tree_12_12"
+	adoption_bonus = "tr_communist_spy_adopt"
+	finish_bonus = "tr_communist_spy_finish"
+
+	potential = {
+		is_communist_country = yes
+	}
+
+	traditions = {
+		"tr_communist_spy_1"
+		"tr_communist_spy_2"
+		"tr_communist_spy_3"
+		"tr_communist_spy_4"
+		"tr_communist_spy_5"
+	}
+
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 1.5
+			is_communist_country = yes
+		}
+	}
+}

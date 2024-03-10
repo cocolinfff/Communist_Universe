@@ -1,0 +1,55 @@
+#我们的同志
+opinion_commuist_socialism_pos_1 = {
+    trigger = {
+        OR = {
+            has_authority = "ethic_capitalism"
+            has_civic = "civic_soviet"
+        }
+        from = {
+            OR = {
+                has_authority = "ethic_capitalism"
+                has_civic = "civic_soviet"
+            }
+        }
+    }
+    opinion = {
+        base = 100
+    }
+}
+#阶级敌人
+opinion_commuist_capitalism_neg_1 = {
+    trigger = {
+        OR = {
+            has_civic = "civic_communist_soviet"
+            has_civic = "civic_soviet"
+            has_authority = "ethic_capitalism"
+        }
+        from = {
+            OR = {
+                has_authority = "auth_corporate"
+            }
+        }
+    }
+    opinion = {
+        base = -100
+    }
+}
+#
+opinion_commuist_capitalism_neg_2 = {
+    trigger = {
+        OR = {
+            has_ethic = "ethic_capitalism"
+            has_authority = "auth_corporate"
+
+        }
+        from = {
+            OR = {
+                has_civic = "civic_communist_soviet"
+                has_civic = "civic_soviet"
+            }
+        }
+    }
+    opinion = {
+        base = -100
+    }
+}

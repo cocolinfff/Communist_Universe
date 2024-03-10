@@ -1,0 +1,92 @@
+tr_communist_struggle_adopt = {
+	modifier = {
+		country_starbase_capacity_add = 2
+		starbase_upgrade_speed_mult = 0.5
+	}
+}
+
+tr_communist_struggle_finish = {
+	modifier = {
+		country_starbase_capacity_add = 3
+		ascension_perks_add = 1
+	}
+}
+
+tr_communist_struggle_1 = {
+	modifier = {
+		army_morale = 0.5
+		army_defense_health_mult = 0.2
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_communist_struggle_2 = {
+	possible = {
+		has_tradition = tr_communist_struggle_1
+	}
+
+	modifier = {
+		planet_orbital_bombardment_damage = -0.5
+		country_war_exhaustion_mult = -0.5
+		country_hostile_claim_influence_cost_mult = 1
+	}
+
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_struggle_3 = {
+	possible = {
+		has_tradition = tr_communist_struggle_2
+	}
+
+	modifier = {
+		starbase_defensive_war_ship_build_speed_mult = 0.5
+		ship_home_territory_fire_rate_mult = 0.5
+	}
+
+	ai_weight = {
+		factor = 5000
+		modifier = {
+			factor = 3
+			any_neighbor_country = {
+				opinion_level = { who = prev level <= poor }
+				relative_power = { who = prev value >= superior }
+			}
+		}
+	}
+}
+
+tr_communist_struggle_4 = {
+	modifier = {
+		shipclass_starbase_hull_mult = 0.5
+		shipclass_military_station_hull_mult = 0.5
+		hostile_operation_sabotage_starbase_difficulty_add = 5
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_communist_struggle_5 = {
+	possible = {
+		has_tradition = tr_communist_struggle_4
+	}
+
+	modifier = {
+		starbase_upgrade_cost_mult = -0.5
+		starbase_defense_platform_capacity_mult = 0.5
+		starbases_upkeep_mult = -0.5
+	}
+
+
+	ai_weight = {
+		factor = 5000
+	}
+}

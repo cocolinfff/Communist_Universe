@@ -1,0 +1,27 @@
+tradition_communist_expansion = {
+	potential = {
+		is_communist_country = yes
+	}
+	tree_template = "tree_12_11"
+	adoption_bonus = "tr_communist_expansion_adopt"
+	finish_bonus = "tr_communist_expansion_finish"
+	traditions = {
+		"tr_communist_expansion_1"
+		"tr_communist_expansion_2"
+		"tr_communist_expansion_3"
+		"tr_communist_expansion_4"
+		"tr_communist_expansion_5"
+	}
+
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 5
+			years_passed < 20
+		}
+		modifier = {
+			factor = 5
+			is_communist_country = yes
+		}
+	}
+}

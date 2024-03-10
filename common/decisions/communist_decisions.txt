@@ -1,0 +1,229 @@
+#建设核电站
+decision_communist_build_energy_deposit = {
+	owned_planets_only = yes
+	icon = decision_communist_build_energy_deposit
+
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 500
+		}
+	}
+	
+	potential = {
+		is_artificial = no
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_hive }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_communist }
+		owner = {
+			has_active_tradition = tr_communist_build_1
+		}
+	}
+	
+	effect = {
+		# Make gaia-planet
+		custom_tooltip = decision_communist_build_energy_deposit_effects
+		hidden_effect = {		
+			add_deposit = d_communist_nuclear_power_plant
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#寻找矿脉
+decision_communist_build_minerals_deposit = {
+	owned_planets_only = yes
+	icon = decision_communist_build_minerals_deposit
+
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 500
+		}
+	}
+	
+	potential = {
+		is_artificial = no
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_hive }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_communist }
+		owner = {
+			has_active_tradition = tr_communist_build_3
+		}
+	}
+	
+	effect = {
+		# Make gaia-planet
+		custom_tooltip = decision_communist_build_minerals_deposit_effects
+		hidden_effect = {		
+			add_deposit = d_communist_minerals_lode
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#建设水培农场
+decision_communist_build_food_deposit = {
+	owned_planets_only = yes
+	icon = decision_communist_build_food_deposit
+
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+			energy = 500
+		}
+	}
+	
+	potential = {
+		is_artificial = no
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_hive }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_communist }
+		owner = {
+			has_active_tradition = tr_communist_build_4
+		}
+	}
+	
+	effect = {
+		# Make gaia-planet
+		custom_tooltip = decision_communist_build_food_deposit_effects
+		hidden_effect = {		
+			add_deposit = d_communist_food_farm
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#改造世界
+decision_communist_change_world = {
+	owned_planets_only = yes
+	icon = decision_communist_change_world
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			unity = 10000
+			minerals = 10000
+			energy = 10000
+			volatile_motes = 100
+		}
+	}
+	
+	potential = {
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_communist
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_habitat
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+		}
+		habitable_structure = no
+		exists = owner
+		owner = { has_active_tradition = tr_communist_transform_finish }
+	}
+	
+	allow = {
+		planet_size < 25
+	}
+	
+	effect = {
+		# Make gaia-planet
+		custom_tooltip = decision_communist_change_world_effects
+		hidden_effect = {		
+			clear_deposits = yes
+			change_pc = pc_gaia
+			set_planet_size = 25
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#建设工人理想城
+decision_communist_build_workerers_world = {
+	owned_planets_only = yes
+	icon = decision_communist_build_workerers_world
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+		}
+	}
+	
+	potential = {
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_communist
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_habitat
+			is_planet_class = pc_relic
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+		}
+		habitable_structure = no
+		exists = owner
+		owner = { has_ascension_perk = ap_communist_workers_world }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_arcology_project_requirements
+			free_district_slots < 1
+			num_districts = { type = district_farming value < 1 }
+			num_districts = { type = district_mining value < 1 }
+			num_districts = { type = district_generator value < 1 }
+		}
+		num_uncleared_blockers < 1
+	}
+	
+	effect = {
+		# Make city-planet
+		custom_tooltip = decision_communist_build_workerers_world
+		hidden_effect = {		
+			clear_deposits = yes
+			change_pc = pc_communist
+			add_district = district_communist_workers_home
+			add_district = district_communist_workers_home
+			add_district = district_communist_workers_home
+			add_district = district_communist_workers_home
+			add_district = district_communist_workers_home
+			add_district = district_communist_workers_home
+			add_district = district_communist_workers_home
+			set_planet_entity = {
+				entity = "communist_city_planet"
+			}
+			planet_event = { id = communist_ap.3 }
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

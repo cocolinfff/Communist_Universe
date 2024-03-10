@@ -1,0 +1,79 @@
+#引导革命
+operation_induce_communist_revolution = {
+	target = none
+	categories = { op_cat_subterfuge op_cat_government }
+	picture = GFX_evt_galactic_senate
+	desc = operation_induce_communist_revolution_desc
+	stages = 3
+
+	resources = {
+		category = operations
+		cost = {
+			energy = 1000
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	spy_power_cost = 30
+	potential = { has_nemesis = yes }
+	allow = {
+		custom_tooltip = {
+			target = {
+				NOT = { has_modifier = communist_revolution_are_being_considered }
+			}
+			fail_text = target_communist_revolution_are_being_considered
+		}
+		custom_tooltip = {
+			target = {
+				is_communist_country = no
+			}
+			fail_text = target_is_communist_country
+		}
+		custom_tooltip = {
+			target = {
+				NOT = { has_modifier = communist_revolution_was_failed }
+			}
+			fail_text = target_communist_revolution_was_failed
+		}
+		custom_tooltip = {
+			fail_text = need_tr_communist_revolution_adopt
+			owner = {
+				has_active_tradition = tr_communist_revolution_adopt
+			}
+		}
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = operation_communist_revolution.1
+	}
+	stage = {
+		difficulty = 9
+		icon = GFX_espionage_chapter_icon_target
+		event = operation_communist_revolution.2
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_espionage_chapter_icon_security
+		event = operation_communist_revolution.3
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = {
+			RANDOM_EVENTS = operation_random_events_generic
+		}
+	}
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+on_press_begin = {
+	events = {
+		communist.1
+		communist.2
+	}
+}

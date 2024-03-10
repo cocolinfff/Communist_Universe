@@ -1,0 +1,28 @@
+tradition_communist_build = {
+	potential = {
+		is_communist_country = yes
+	}
+	tree_template = "tree_12_11"
+	adoption_bonus = "tr_communist_build_adopt"
+	finish_bonus = "tr_communist_build_finish"
+	traditions = {
+		"tr_communist_build_1"
+		"tr_communist_build_2"
+		"tr_communist_build_3"
+		"tr_communist_build_4"
+		"tr_communist_build_5"
+	}
+
+	ai_weight = {
+		factor = 20
+		
+		modifier = {
+			factor = 5
+			is_communist_country = yes
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}

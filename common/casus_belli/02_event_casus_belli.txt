@@ -1,0 +1,11 @@
+cb_event = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_communist_country = no
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}

@@ -1,0 +1,57 @@
+#核电站
+d_communist_nuclear_power_plant = {
+	is_for_colonizeable = yes
+	icon = d_communist_nuclear_power_plant
+	
+	planet_modifier = { 
+		district_generator_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#地心矿脉
+d_communist_minerals_lode = {
+	is_for_colonizeable = yes
+	icon = d_communist_minerals_lode
+	
+	planet_modifier = { 
+		district_mining_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#水培农场
+d_communist_food_farm = {
+	is_for_colonizeable = yes
+	icon = d_communist_food_farm
+	
+	planet_modifier = { 
+		district_farming_max = 15
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#阿芙乐尔号巡洋舰
+d_avril_cruiser = {
+	is_for_colonizeable = yes
+	icon = d_avril_cruiser
+	
+	planet_modifier = { 
+		planet_jobs_unity_produces_mult = 0.1
+		planet_stability_add = 10
+		pop_government_ethic_attraction = 1		
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

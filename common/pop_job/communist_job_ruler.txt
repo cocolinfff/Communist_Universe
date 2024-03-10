@@ -1,0 +1,403 @@
+###################
+# Basic Jobs
+###################
+
+
+#国家计划委员会主任
+communist_technician = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_energy_grid
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_worker_job
+
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 6
+		}
+		produces = {
+			trigger = {
+				owner = {
+					is_robot_empire = yes
+				}
+			}
+			energy = 2
+		}
+		produces = {
+			trigger = {
+				owner = {
+					OR = {
+						has_valid_civic = civic_shared_burden
+						has_valid_civic = civic_advanced_socialism
+						has_valid_civic = civic_transcendental_communism
+					}
+				}
+			}
+			physics_research = 0.25
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_energy_requisitorium
+				}
+			}
+			energy = @requisitorium_energy_reduction
+		}
+		#社会主义
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_ethic = ethic_fanatic_socialism
+				}
+			}
+			unity = 0.5
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_ethic = ethic_socialism
+				}
+			}
+			unity = 0.25
+		}
+	}
+
+	triggered_country_modifier = { # 共产主义社会
+		potential = {
+			exists = owner
+			owner = {
+				is_community_country = yes
+			}
+		}
+		modifier = {
+			country_admin_cap_add = 0.5
+		}
+	}
+	# #污染
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		owner = {
+	# 			OR = {
+	# 				NOT = {
+	# 					is_no_planet_country = yes
+	# 				}
+	# 				has_origin = origin_ev_both_choosen
+	# 				has_valid_civic = civic_ev_planet_and_fleet
+	# 				has_ascension_perk = ev_land_planets
+	# 			}
+	# 		}
+	# 	}
+	# 	pop_environment_tolerance = -0.005
+	# 	mult = value:scripted_modifier_mult|MODIFIER|job_environmental_pollution_caused_mult|
+	# }
+	#太阳能发电为啥会减宜居？
+	overlord_resources = {
+		category = planet_requisitioned_energy
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_energy_requisitorium
+				}
+			}
+			energy = @requisitorium_energy_overlord
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		modifier = { # 可控的动态权重
+			factor = value:job_weights_modifier|JOB|technician|RESOURCE|energy|
+			owner = { has_edict = dynamic_weight }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			can_fill_specialist_job = no
+		}
+		modifier = {
+			factor = 8
+			is_enslaved = yes
+			can_take_servant_job = no
+			OR = {
+				has_trait = trait_syncretic_proles
+				has_trait = trait_robot_superconductive
+				has_trait = trait_ingenious
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}
+		# low income modifier
+		modifier = {
+			factor = 250
+			exists = planet
+			planet = {
+				has_available_jobs = "technician"
+			}
+			exists = owner
+			owner = {
+				is_ai = yes
+				has_monthly_income = {
+					resource = energy
+					value < 20
+				}
+			}
+		}
+	}
+}
+
+#人民代表
+communist_miner = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_mineral_purification_plant
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_worker_job
+
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 4
+		}
+		produces = {
+			trigger = {
+				owner = {
+					OR = {
+						has_valid_civic = civic_shared_burden
+						has_valid_civic = civic_advanced_socialism
+						has_valid_civic = civic_transcendental_communism
+					}
+				}
+			}
+			engineering_research = 0.25
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_valid_civic = civic_anglers_lithoid
+				}
+				planet = { is_wet = yes }
+			}
+			minerals = 1
+			consumer_goods = 1
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_valid_civic = civic_anglers_lithoid
+					has_technology = tech_mine_rare_crystals
+				}
+				planet = { is_wet = yes }
+			}
+			rare_crystals = 0.25
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_material_requisitorium
+				}
+			}
+			minerals = @requisitorium_minerals_reduction
+		}
+		
+		#社会主义
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_ethic = ethic_fanatic_socialism
+				}
+			}
+			unity = 0.5
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_ethic = ethic_socialism
+				}
+			}
+			unity = 0.25
+		}
+	}
+	
+	triggered_country_modifier = { # 共产主义社会
+		potential = {
+			exists = owner
+			owner = {
+				is_community_country = yes
+			}
+		}
+		modifier = {
+			country_admin_cap_add = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_mining_guilds
+			}
+		}
+		modifier = {
+			planet_amenities_add = 1
+			mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_mining_guilds
+			}
+		}
+		modifier = {
+			trade_value_add = 3
+		    mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_mining_company
+			}
+		}
+		modifier = {
+			planet_amenities_add = 1
+			mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_mining_company
+			}
+		}
+		modifier = {
+			trade_value_add = 3
+		    mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+		}
+	}
+	#污染
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				OR = {
+					NOT = {
+						is_no_planet_country = yes
+					}
+					has_origin = origin_ev_both_choosen
+					has_valid_civic = civic_ev_planet_and_fleet
+					has_ascension_perk = ev_land_planets
+				}
+			}
+		}
+		pop_environment_tolerance = -0.005
+		mult = value:scripted_modifier_mult|MODIFIER|job_environmental_pollution_caused_mult|
+	}
+
+	triggered_planet_modifier = {
+		# Gives some Stability per "Mining Guild" Councilor level.
+		potential = {
+			has_councilor = { COUNCILOR = "councilor_mining_guilds" }
+		}
+		planet_stability_add = @councilor_mining_guilds_miner_stability
+		mult = value:councilor_level|TYPE|councilor_mining_guilds|
+	}
+	overlord_resources = {
+		category = planet_requisitioned_minerals
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_material_requisitorium
+				}
+			}
+			minerals = @requisitorium_minerals_overlord
+		}
+	}
+	
+	weight = {
+		weight = @worker_job_weight
+		modifier = { # 可控的动态权重
+			factor = value:job_weights_modifier|JOB|miner|RESOURCE|minerals|
+			owner = { has_edict = dynamic_weight }
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+			NOT = { has_slavery_type = { type = slavery_indentured } }
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { has_technology = tech_droid_workers }
+		}
+		modifier = {
+			factor = 200
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { NOT = { has_technology = tech_droid_workers } }
+		}
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}
+
+		# low income modifier
+		modifier = {
+			factor = 1.1
+			exists = planet
+			planet = {
+				has_available_jobs = "miner"
+			}
+			exists = owner
+			owner = {
+				is_ai = yes
+				has_monthly_income = {
+					resource = minerals
+					value < 0
+				}
+			}
+		}
+	}
+}

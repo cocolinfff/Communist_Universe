@@ -1,0 +1,1905 @@
+@base_cost = 300
+@city_cost = 500
+#发电区划
+district_generator = {
+	expansion_planner = yes
+	base_buildtime = 240
+	min_for_deposits_on_planet = 3
+	max_for_deposits_on_planet = 15
+	show_on_uncolonized = {
+		uses_district_set = standard
+		is_pd_wasteland = no
+		is_pd_planetary_megaproject = no
+	}
+	potential = {
+		uses_district_set = standard
+		is_pd_wasteland = no
+		is_pd_planetary_megaproject = no
+		NAND = {
+			exists = owner
+			owner = {
+				OR = {
+					has_origin = origin_praise_the_sun
+					has_origin = origin_no_water_no_fish
+					is_primitive_society = yes
+				}
+			}
+		}
+	}
+	allow = {
+		NOT = {
+			has_modifier = resort_colony
+		}
+	}
+	destroy_trigger = {
+		OR = {
+			is_pd_wasteland = yes
+			is_pd_planetary_megaproject = yes
+			AND = {
+				exists = owner
+				owner = {
+					OR = {
+						has_origin = origin_praise_the_sun
+						has_origin = origin_no_water_no_fish
+						is_primitive_society = yes
+					}
+				}
+			}
+		}
+	}
+	conversion_ratio = 1
+	convert_to = {
+		district_generator_uncapped
+	}
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_valid_civic = civic_worker_coop
+				}
+			}
+			energy = 0.25
+		}
+	}
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_authority = auth_democratic_centralism
+		}
+		modifier = {
+			job_technician_drone_add = -3
+			job_communist_technician_drone_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+		mult = owner.value:scripted_modifier_add|MODIFIER|generator_district_housing_add|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 1
+		}
+		mult = owner.value:scripted_modifier_add|MODIFIER|generator_district_buildings_add|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = economic_crisis_10_01
+			}
+		}
+		modifier = {
+			job_technician_add = -0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_valid_civic = civic_welfare_state
+				}
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_worker_coop
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = trade_conversion_mutual_aid
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_utopian_dream
+				has_policy_flag = trade_conversion_mutual_aid
+				NOR = {
+					has_origin = origin_zarqlanism_idea
+					has_origin = origin_galaxy_iron_curtain
+				}
+			}
+		}
+		modifier = {
+			job_technician_add = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_utopian_dream
+				has_policy_flag = trade_conversion_mutual_aid
+				has_origin = origin_galaxy_iron_curtain
+			}
+		}
+		modifier = {
+			job_primitive_technician_add = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_utopian_dream
+				has_policy_flag = trade_conversion_mutual_aid
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_generator_add = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_the_greater_good
+			}
+			has_global_flag = ideological_revolution
+		}
+		modifier = {
+			job_labour_hero_add = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 2
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			has_active_building = building_energy_nexus
+		}
+		modifier = {
+			job_technician_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+				NOR = {
+					has_origin = origin_zarqlanism_idea
+					has_origin = origin_galaxy_iron_curtain
+				}
+			}
+		}
+		modifier = {
+			job_technician_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_galaxy_iron_curtain
+			}
+		}
+		modifier = {
+			job_primitive_technician_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_generator_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+				NOR = {
+					has_origin = origin_zarqlanism_idea
+					has_origin = origin_galaxy_iron_curtain
+				}
+			}
+			has_active_building = building_energy_nexus
+		}
+		modifier = {
+			job_technician_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_galaxy_iron_curtain
+			}
+			has_active_building = building_energy_nexus
+		}
+		modifier = {
+			job_primitive_technician_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+				has_origin = origin_zarqlanism_idea
+			}
+			has_active_building = building_energy_nexus
+		}
+		modifier = {
+			job_re_acolyte_generator_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_generator_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+			has_active_building = building_energy_nexus
+		}
+		modifier = {
+			job_fe_acolyte_generator_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_market_type = yes
+			}
+		}
+		modifier = {
+			trade_value_reduction = 0.01
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_the_greater_good
+			}
+			has_global_flag = ideological_revolution
+		}
+		text = job_labour_hero_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_technician_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_technician_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		text = job_fe_acolyte_generator_effect_desc
+	}
+	prerequisites = {
+		tech_power_plant_1
+	}
+	ai_resource_production = {
+		energy = 15
+		trigger = {
+			always = yes
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 10
+			owner = { has_monthly_income = { resource = energy value <= 50 } }
+		}
+	}
+}
+
+#采矿区划
+district_mining = {
+	expansion_planner = yes
+	base_buildtime = 240
+	min_for_deposits_on_planet = 1
+	max_for_deposits_on_planet = 15
+	show_on_uncolonized = {
+		uses_district_set = standard
+		NAND = {
+			exists = from
+			from = {
+				is_subterranean_empire = yes
+			}
+		}
+		is_pd_wasteland = no
+		is_pd_planetary_megaproject = no
+	}
+	potential = {
+		uses_district_set = standard
+		exists = owner
+		owner = {
+			is_primitive_society = no
+		}
+		OR = {
+			owner = {
+				NOR = {
+					has_civic = civic_anglers_lithoid
+					has_origin = origin_no_water_no_fish
+					is_subterranean_empire = yes
+				}
+			}
+			AND = {
+				owner = {
+					has_civic = civic_anglers_lithoid
+				}
+				NOT = {
+					OR = {
+						is_planet_class = pc_ocean
+						is_planet_class = pc_aquatic
+						is_planet_class = pc_reef
+						is_planet_class = pc_desertislands
+						is_planet_class = pc_subarctic
+					}
+				}
+			}
+		}
+		is_pd_wasteland = no
+		is_pd_planetary_megaproject = no
+	}
+	allow = {
+		NOT = {
+			has_modifier = resort_colony
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_primitive_society = yes
+		}
+		NOR = {
+			owner = {
+				NOR = {
+					has_civic = civic_anglers_lithoid
+					has_origin = origin_no_water_no_fish
+					is_subterranean_empire = yes
+				}
+			}
+			AND = {
+				owner = {
+					has_civic = civic_anglers_lithoid
+				}
+				NOT = {
+					OR = {
+						is_planet_class = pc_ocean
+						is_planet_class = pc_aquatic
+						is_planet_class = pc_reef
+						is_planet_class = pc_desertislands
+						is_planet_class = pc_subarctic
+					}
+				}
+			}
+		}
+	}
+	conversion_ratio = 1
+	convert_to = {
+		district_mining_uncapped
+	}
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_valid_civic = civic_worker_coop
+				}
+			}
+			energy = 0.25
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					OR = {
+						has_valid_civic = civic_mining_guilds
+					}
+				}
+			}
+			energy = 0.5
+		}
+	}
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_authority = auth_democratic_centralism
+		}
+		modifier = {
+			job_miner_add= -3
+			job_communist_miner_drone_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = economic_crisis_10_02
+			}
+		}
+		modifier = {
+			job_miner_add = -0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+		mult = owner.value:scripted_modifier_add|MODIFIER|mining_district_housing_add|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 1
+		}
+		mult = owner.value:scripted_modifier_add|MODIFIER|mining_district_buildings_add|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_valid_civic = civic_welfare_state
+				}
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_worker_coop
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = trade_conversion_mutual_aid
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_utopian_dream
+				has_policy_flag = trade_conversion_mutual_aid
+				NOR = {
+					has_origin = origin_zarqlanism_idea
+					has_origin = origin_galaxy_iron_curtain
+				}
+			}
+		}
+		modifier = {
+			job_miner_add = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_utopian_dream
+				has_policy_flag = trade_conversion_mutual_aid
+				has_origin = origin_galaxy_iron_curtain
+			}
+		}
+		modifier = {
+			job_primitive_miner_add = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_utopian_dream
+				has_policy_flag = trade_conversion_mutual_aid
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_mine_add = 0.375
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_the_greater_good
+			}
+			has_global_flag = ideological_revolution
+		}
+		modifier = {
+			job_labour_hero_add = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_valid_civic = civic_keepers_harmony
+				}
+			}
+		}
+		modifier = {
+			planet_amenities_add = -1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 2
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			has_active_building = building_mineral_purification_hub
+		}
+		modifier = {
+			job_mining_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+				NOR = {
+					has_origin = origin_zarqlanism_idea
+					has_origin = origin_galaxy_iron_curtain
+				}
+			}
+		}
+		modifier = {
+			job_miner_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_galaxy_iron_curtain
+			}
+		}
+		modifier = {
+			job_primitive_miner_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_mine_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+				NOR = {
+					has_origin = origin_zarqlanism_idea
+					has_origin = origin_galaxy_iron_curtain
+				}
+			}
+			has_active_building = building_mineral_purification_hub
+		}
+		modifier = {
+			job_miner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_galaxy_iron_curtain
+			}
+			has_active_building = building_mineral_purification_hub
+		}
+		modifier = {
+			job_primitive_miner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+				has_origin = origin_zarqlanism_idea
+			}
+			has_active_building = building_mineral_purification_hub
+		}
+		modifier = {
+			job_re_acolyte_mine_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_mine_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+			has_active_building = building_mineral_purification_hub
+		}
+		modifier = {
+			job_fe_acolyte_mine_add = 1
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_the_greater_good
+			}
+			has_global_flag = ideological_revolution
+		}
+		text = job_labour_hero_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_mining_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_miner_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		text = job_fe_acolyte_mine_effect_desc
+	}
+	prerequisites = {
+		tech_mechanized_mining
+	}
+	ai_resource_production = {
+		minerals = 15
+		trigger = {
+			always = yes
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 10
+			owner = { has_monthly_income = { resource = minerals value <= 30 } }
+		}
+	}
+}
+
+#农业区划
+district_farming = {
+	expansion_planner = yes
+	base_buildtime = 240
+	min_for_deposits_on_planet = 3
+	max_for_deposits_on_planet = 15
+	show_on_uncolonized = {
+		uses_district_set = standard
+		is_pd_wasteland = no
+		is_pd_planetary_megaproject = no
+		NOR = {
+			is_planet_class = pc_technoorganic
+			has_deposit = d_technocanal
+			has_deposit = d_technocanal_blocker
+		}
+	}
+	potential = {
+		uses_district_set = standard
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					is_anglers_empire = yes
+					has_origin = origin_no_water_no_fish
+				}
+			}
+			NOR = {
+				is_planet_class = pc_ocean
+				is_pd_aquatics = yes
+				is_planet_class = pc_reef
+				is_planet_class = pc_pd_archipelago
+				is_planet_class = pc_desertislands
+				is_planet_class = pc_subarctic
+				is_planet_class = pc_storm
+				is_planet_class = pc_pd_iceberg
+			}
+		}
+		owner = {
+			is_primitive_society = no
+		}
+		is_pd_wasteland = no
+		is_pd_planetary_megaproject = no
+		NOT = {
+			is_planet_class = pc_technoorganic
+		}
+		NOT = {
+			has_deposit = d_technocanal
+		}
+		NOT = {
+			has_deposit = d_technocanal_blocker
+		}
+	}
+	allow = {
+		NOT = {
+			has_modifier = resort_colony
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		NOR = {
+			owner = {
+				NOR = {
+					is_anglers_empire = yes
+					has_origin = origin_no_water_no_fish
+				}
+			}
+			NOR = {
+				is_planet_class = pc_ocean
+				is_pd_aquatics = yes
+				is_planet_class = pc_reef
+				is_planet_class = pc_pd_archipelago
+				is_planet_class = pc_desertislands
+				is_planet_class = pc_subarctic
+				is_planet_class = pc_storm
+				is_planet_class = pc_pd_iceberg
+			}
+		}
+		OR = {
+			owner = {
+				is_primitive_society = no
+			}
+			is_pd_wasteland = no
+			is_pd_planetary_megaproject = no
+			is_planet_class = pc_technoorganic
+			has_deposit = d_technocanal
+			has_deposit = d_technocanal_blocker
+		}
+	}
+	conversion_ratio = 1
+	convert_to = {
+		district_farming_uncapped
+	}
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_valid_civic = civic_worker_coop
+				}
+			}
+			energy = 0.25
+		}
+	}
+	planet_modifier = {
+		planet_housing_add = 2
+		pop_growth_speed = 0.02
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_authority = auth_democratic_centralism
+		}
+		modifier = {
+			job_farmer_add= -2
+			job_communist_farmer_drone_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = economic_crisis_10_03
+				NAND = {
+					is_anglers_empire = yes
+					PREV = {
+						planet = {
+							is_wet = yes
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			job_farmer_add = -0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = economic_crisis_10_03
+				is_anglers_empire = yes
+			}
+			planet = {
+				is_wet = yes
+			}
+		}
+		modifier = {
+			job_pearl_diver_add = -0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+		mult = owner.value:scripted_modifier_add|MODIFIER|farming_district_housing_add|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 1
+		}
+		mult = owner.value:scripted_modifier_add|MODIFIER|farming_district_buildings_add|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_agrarian_idyll
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			job_agri_drone_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			job_agri_drone_add = 2
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+				NOR = {
+					has_origin = origin_zarqlanism_idea
+					has_origin = origin_galaxy_iron_curtain
+				}
+				NAND = {
+					is_anglers_empire = yes
+					PREV = {
+						planet = {
+							is_wet = yes
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			job_farmer_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_galaxy_iron_curtain
+				NAND = {
+					is_anglers_empire = yes
+					PREV = {
+						planet = {
+							is_wet = yes
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			job_primitive_farmer_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_big_industrial_farming
+				NOR = {
+					has_origin = origin_zarqlanism_idea
+					has_origin = origin_galaxy_iron_curtain
+				}
+			}
+		}
+		modifier = {
+			job_farmer_add = -1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_big_industrial_farming
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_farm_add = -1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_big_industrial_farming
+				has_origin = origin_galaxy_iron_curtain
+			}
+		}
+		modifier = {
+			job_primitive_farmer_add = -1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				has_origin = origin_zarqlanism_idea
+				NAND = {
+					is_anglers_empire = yes
+					PREV = {
+						planet = {
+							is_wet = yes
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			job_re_acolyte_farm_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_anglers_empire = yes
+			}
+			planet = {
+				is_wet = yes
+			}
+		}
+		modifier = {
+			job_angler_add = 1
+			job_pearl_diver_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_valid_civic = civic_welfare_state
+				}
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_worker_coop
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = trade_conversion_mutual_aid
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_utopian_dream
+				has_policy_flag = trade_conversion_mutual_aid
+				NOR = {
+					has_origin = origin_zarqlanism_idea
+					has_origin = origin_galaxy_iron_curtain
+				}
+			}
+		}
+		modifier = {
+			job_farmer_add = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_utopian_dream
+				has_policy_flag = trade_conversion_mutual_aid
+				has_origin = origin_galaxy_iron_curtain
+			}
+		}
+		modifier = {
+			job_primitive_farmer_add = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_valid_civic = civic_big_industrial_farming
+				}
+			}
+		}
+		modifier = {
+			planet_housing_add = -1
+			trade_value_add = 2
+			pop_lifestyle_trade_mult = 0.01
+			pop_environment_tolerance = -0.02
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_utopian_dream
+				has_policy_flag = trade_conversion_mutual_aid
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_farm_add = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_the_greater_good
+			}
+			has_global_flag = ideological_revolution
+		}
+		modifier = {
+			job_labour_hero_add = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_farm_add = 2
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_the_greater_good
+			}
+			has_global_flag = ideological_revolution
+		}
+		text = job_labour_hero_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_agri_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+				NAND = {
+					is_anglers_empire = yes
+					PREV = {
+						planet = {
+							is_wet = yes
+						}
+					}
+				}
+			}
+		}
+		text = job_farmer_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_anglers_empire = yes
+			}
+			planet = {
+				is_wet = yes
+			}
+		}
+		text = job_aqu_angler_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_anglers_empire = yes
+			}
+			planet = {
+				is_wet = yes
+			}
+		}
+		text = job_pearl_diver_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		text = job_fe_acolyte_farm_effect_desc
+	}
+	prerequisites = {
+		tech_industrial_farming
+	}
+	ai_resource_production = {
+		food = 15
+		trigger = {
+			always = yes
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 10
+			owner = { country_uses_food = yes }
+			owner = { has_monthly_income = { resource = food value <= 30 } }
+		}
+	}
+}
+
+# 工业区划
+district_industrial = {
+	base_buildtime = 480
+	is_capped_by_modifier = no
+	prerequisites = {
+		tech_basic_industry
+	}
+	show_on_uncolonized = {
+		exists = from
+		from = { is_primitive_society = no }
+		OR = {
+			uses_district_industrial = yes
+			uses_district_set = pdnecroplanet
+			uses_district_set = pdscrapyard
+		}
+	}
+	potential = {
+		exists = owner
+		owner = { is_primitive_society = no }
+		OR = {
+			uses_district_industrial = yes
+			uses_district_set = pdnecroplanet
+			uses_district_set = pdscrapyard
+		}
+	}
+	allow = {
+		NOT = {
+			has_modifier = resort_colony
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+		is_pd_planetary_megaproject = no
+	}
+	conversion_ratio = 0.5
+	convert_to = {
+		district_arcology_arms_industry
+		district_rw_industrial
+		district_corp_industrial
+		district_bioforge_stomach
+		district_mf_alloy
+		district_techno_industrial
+	}
+	resources = {
+		category = planet_districts_industrial
+		cost = {
+			minerals = @city_cost
+		}
+		upkeep = {
+			energy = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_valid_civic = civic_worker_coop
+				}
+			}
+			energy = 0.5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = industrial_maintenance
+				}
+			}
+			energy = 2
+		}
+	}
+	planet_modifier = {
+		planet_housing_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_worker_coop
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = economic_crisis_10_04
+			}
+		}
+		modifier = {
+			job_artisan_add = -0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = economic_crisis_10_05
+			}
+		}
+		modifier = {
+			job_foundry_add = -0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_relentless_industrialist_empire = yes
+			}
+		}
+		modifier = {
+			planet_max_buildings_add = 0.68
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_crafters
+				NOT = { has_origin = origin_zarqlanism_idea }
+			}
+		}
+		modifier = {
+			job_artisan_add = 0.5
+			pop_lifestyle_trade_mult = 0.025
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_crafters
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_artisan_add = 0.5
+			pop_lifestyle_trade_mult = 0.025
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = trade_conversion_industrial_progress
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = trade_conversion_industrial_progress
+				has_tradition = tr_harmony_utopian_dream
+				NOT = {
+					has_origin = origin_zarqlanism_idea
+				}
+			}
+		}
+		modifier = {
+			job_artisan_add = 0.34
+			job_foundry_add = 0.34
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = trade_conversion_industrial_progress
+				has_tradition = tr_harmony_utopian_dream
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_metallurgists_add = 0.25
+			job_re_acolyte_artisan_add = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_harmony_the_greater_good
+			}
+			has_global_flag = ideological_revolution
+		}
+		modifier = {
+			job_labour_hero_add = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_regular_empire = yes
+					has_origin = origin_fear_of_the_dark
+				}
+				NOT = {
+					has_origin = origin_zarqlanism_idea
+				}
+			}
+		}
+		modifier = {
+			job_artisan_add = 1
+			job_foundry_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_metallurgists_add = 1
+			job_re_acolyte_artisan_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			job_fabricator_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_designation = col_capital_foundry
+				has_designation = col_foundry
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = {
+					has_origin = origin_zarqlanism_idea
+				}
+			}
+		}
+		modifier = {
+			job_artisan_add = -1
+			job_foundry_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_designation = col_capital_foundry
+				has_designation = col_foundry
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_artisan_add = -1
+			job_re_acolyte_metallurgists_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_designation = col_capital_factory
+				has_designation = col_factory
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = {
+					has_origin = origin_zarqlanism_idea
+				}
+			}
+		}
+		modifier = {
+			job_artisan_add = 1
+			job_foundry_add = -1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_designation = col_capital_factory
+				has_designation = col_factory
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		modifier = {
+			job_re_acolyte_metallurgists_add = -1
+			job_re_acolyte_artisan_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_designation = col_capital_foundry
+				has_designation = col_foundry
+				has_designation = col_mac_foundry
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				country_uses_consumer_goods = yes
+			}
+			OR = {
+				has_active_building = building_factory_2
+				has_active_building = building_factory_3
+			}
+		}
+		modifier = {
+			job_artisan_drone_add = -1
+			job_alloy_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_designation = col_capital_factory
+				has_designation = col_factory
+				has_designation = col_mac_factory
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				country_uses_consumer_goods = yes
+			}
+		}
+		modifier = {
+			job_artisan_drone_add = 1
+			job_alloy_drone_add = -1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_civic = civic_consumerism
+			}
+		}
+		modifier = {
+			job_trader_add = 1
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_origin = origin_zarqlanism_idea }
+			}
+		}
+		text = job_artisan_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		text = job_re_acolyte_artisan_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_valid_civic = civic_machine_servitor
+			}
+			OR = {
+				has_active_building = building_factory_2
+				has_active_building = building_factory_3
+			}
+		}
+		text = job_artisan_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_origin = origin_zarqlanism_idea }
+			}
+		}
+		text = job_foundry_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_origin = origin_zarqlanism_idea
+			}
+		}
+		text = job_re_acolyte_metallurgists_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = job_fabricator_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = job_alloy_drone_effect_desc
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_edict = industrial_maintenance
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 1
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_edict = industrial_maintenance
+			}
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+	ai_resource_production = {
+		alloys = 8
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 15
+		trigger = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 10
+			OR = {
+				owner = { has_monthly_income = { resource = alloys value <= 30 } }
+				AND = {
+					owner = { country_uses_consumer_goods = yes }
+					owner = { has_monthly_income = { resource = consumer_goods value <= 30 } }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+tr_communist_unite_adopt = {
+	modifier = {
+		diplo_weight_mult = 0.1
+		envoys_add = 1
+	}
+}
+
+tr_communist_unite_finish = {
+	modifier = {
+		country_border_friction_mult = -1
+		ascension_perks_add = 1
+	}
+}
+
+tr_communist_unite_1 = {
+	custom_tooltip = tr_communist_unite_1_desc
+
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.2
+	}
+
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+tr_communist_unite_2 = {
+	possible = {
+		has_tradition = tr_communist_unite_1
+	}
+
+	modifier = {
+		federation_naval_cap_contribution_mult = 1.00
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_communist_unite_3 = {
+
+	modifier = {
+		diplo_action_acceptance_add = 5
+		envoy_improve_relations_mult = 0.5
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_unite_4 = {
+	possible = {
+		has_tradition = tr_communist_unite_3
+	}
+
+	modifier = {
+		country_trust_cap_add = 100
+		country_trust_growth = 0.5
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_unite_5 = {
+	possible = {
+		has_tradition = tr_communist_unite_3
+	}
+
+	modifier = {
+		envoys_add = 1
+		country_base_influence_produces_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

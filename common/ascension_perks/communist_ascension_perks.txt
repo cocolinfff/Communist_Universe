@@ -1,0 +1,52 @@
+#######################################
+### Utopia Expanded Ascension Perks ###
+#######################################
+
+#银河灯塔
+ap_communist_galaxy_lighthouse = {
+	on_enabled = {
+		custom_tooltip = "communist_galaxy_lighthouse_tooltip"
+		hidden_effect = {
+			country_event = { id = communist.3 }
+		}	
+	}
+	potential = {
+		is_communist_country = yes
+	}
+	modifier = {
+		country_unity_produces_mult = 0.2
+		envoys_add = 2
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 10
+			is_communist_country = yes
+		}
+		modifier = {
+			factor = 0
+			is_communist_country = no
+		}
+	}
+}
+#红旗计划
+ap_communist_galaxy_ecology = {
+
+
+	potential = {
+		is_communist_country = yes
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 10
+			is_communist_country = yes
+		}
+		modifier = {
+			factor = 0
+			is_communist_country = no
+		}
+	}
+}

@@ -1,0 +1,46 @@
+#苏维埃社会主义共和国联盟
+origin_soviet_union = {
+	is_origin = yes
+	icon = "gfx/event_pictures/origins/origin_soviet_union_small.dds"
+	picture = GFX_origin_soviet_union
+
+	potential = {always = yes}
+
+	possible = {
+		civics = {
+			OR = {
+				#value = civic_soviet
+				value = civic_communist_soviet
+			}
+			authority = { auth_democratic_centralism }
+		}
+		authority = {
+			value = auth_democratic_centralism
+		}
+	}
+
+	random_weight = {base = 1}
+	description = "civic_tooltip_soviet_union_effects"
+	advanced_start = yes
+}
+
+#共产主义革命
+origin_communist_revolution = {
+	is_origin = yes
+	icon = "gfx/event_pictures/origins/origin_soviet_union_small.dds"
+	picture = GFX_origin_communist_revolution
+
+	possible = {
+		civics = {
+			OR = {
+				value = civic_soviet
+				value = civic_communist_soviet
+			}
+		}
+	}
+
+	possible = { is_communist_country = yes } 
+	random_weight = { base = 1 }
+	description = "civic_tooltip_communist_revolution_effects"
+	advanced_start = yes
+}

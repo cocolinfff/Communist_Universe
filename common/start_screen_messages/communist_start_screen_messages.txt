@@ -1,0 +1,20 @@
+### 开局说明
+
+#人类
+part = {
+	location = 0
+	localization = "start_screen_soviet_union_humans"
+	trigger = {
+		has_country_flag = communist_leninism_flag
+		has_country_flag = communist_humans_flag
+	}	
+}
+
+#非人类
+part = {
+	location = 0
+	localization = "start_screen_soviet_union"
+	trigger = {
+		has_country_flag = communist_leninism_flag
+	}	
+}

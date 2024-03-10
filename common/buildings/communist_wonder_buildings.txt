@@ -1,0 +1,60 @@
+#社会主义奇观：塔特林塔
+building_communist_tatlin_tower = {
+	base_buildtime = 3600
+	
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = yes
+
+	category = unity
+
+	empire_limit = {
+	 	base = 1
+	}
+	potential = {
+		exists = planet
+		owner = { 
+			is_communist_country = yes
+			has_ascension_perk = ap_communist_galaxy_lighthouse
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_communist_country = no
+			}
+			has_modifier = slave_colony
+			AND = {
+				buildings_stop_pop = yes
+				owner = { is_ai = yes }
+			}
+		}
+	}
+	allow = {
+		has_upgraded_capital = yes	
+		num_pops >= 50
+	}
+	country_modifier = {
+		ascension_perks_add = 1 
+		country_unity_produces_mult = 0.2
+		pop_ethic_egalitarian_attraction_mult = 0.5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			influence = 50
+			alloys = 5000
+		}
+		produces = {
+			trigger = { exists = owner }
+			unity = 10
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		upkeep = {
+			energy = 50
+		}
+	}		
+}

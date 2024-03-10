@@ -1,0 +1,76 @@
+tr_communist_transform_adopt = {
+	modifier = {
+		planet_non_artificial_max_districts_add = 1
+	}
+}
+
+tr_communist_transform_finish = {
+	custom_tooltip_with_modifiers = tr_communist_transform_finish_desc
+	modifier = {
+		ascension_perks_add = 1
+	}
+}
+
+
+tr_communist_transform_1 = {
+	modifier = {
+		planet_structures_upkeep_mult = -0.10
+	}
+
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+tr_communist_transform_2 = {
+	possible = {
+		has_tradition = tr_communist_transform_1
+	}
+
+	modifier = {
+		pop_environment_tolerance = 0.10
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_transform_3 = {
+	modifier = {
+		deposit_blockers_cost_mult = -0.5
+		terraform_speed_mult = 0.2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_transform_4 = {
+	possible = {
+		has_tradition = tr_communist_transform_3
+	}
+
+	modifier = {
+		planet_max_buildings_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_transform_5 = {
+	possible = {
+		has_tradition = tr_communist_transform_3
+	}
+
+	modifier = {
+		pop_resettlement_cost_mult = -1
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}

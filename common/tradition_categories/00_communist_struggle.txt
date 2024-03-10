@@ -1,0 +1,29 @@
+tradition_communist_struggle = {
+	tree_template = "tree_111_11"
+	adoption_bonus = "tr_communist_struggle_adopt"
+	finish_bonus = "tr_communist_struggle_finish"
+	traditions = {
+		"tr_communist_struggle_1"
+		"tr_communist_struggle_2"
+		"tr_communist_struggle_3"
+		"tr_communist_struggle_4"
+		"tr_communist_struggle_5"
+	}
+
+	potential = {
+		is_communist_country = yes
+	}
+
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 3
+			is_communist_country = yes
+			any_neighbor_country = {
+				is_country_type = default
+				opinion_level = { who = prev level <= poor }
+				relative_power = { who = prev value >= superior }
+			}
+		}
+	}
+}

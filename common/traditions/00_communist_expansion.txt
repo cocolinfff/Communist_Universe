@@ -1,0 +1,79 @@
+tr_communist_expansion_adopt = {
+
+	modifier = {
+		planet_colony_development_speed_mult = 0.2
+		ship_colonizer_cost_mult = -0.2
+	}
+}
+
+tr_communist_expansion_finish = {
+	modifier = {
+		country_starbase_capacity_add = 2
+		ascension_perks_add = 1
+	}
+}
+
+tr_communist_expansion_1 = {
+	modifier = {
+		starbase_outpost_cost_mult = -0.15
+		country_starbase_influence_cost_mult = -0.15
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_communist_expansion_2 = {
+	modifier = {
+		colony_start_num_pops_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_expansion_3 = {
+	possible = {
+		has_tradition = tr_communist_expansion_1
+	}
+
+	modifier = {
+		station_gatherers_cost_mult = -0.5
+	}
+
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_expansion_4 = {
+	possible = {
+		has_tradition = tr_communist_expansion_1
+	}
+	modifier = {
+		starbases_upkeep_mult = -0.25
+	}
+
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_communist_expansion_5 = {
+	possible = {
+		has_tradition = tr_communist_expansion_2
+	}
+
+	modifier = {
+		pop_growth_speed = 0.1
+		pop_assembly_speed = 0.1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

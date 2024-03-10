@@ -1,0 +1,82 @@
+tr_communist_spy_adopt = {
+	modifier = {
+		add_base_country_intel = 40
+	}
+}
+
+tr_communist_spy_finish = {
+	custom_tooltip = tr_communist_spy_finish_desc
+	modifier = {
+		ascension_perks_add = 1
+	}
+}
+
+tr_communist_spy_1 = {
+	modifier = {
+		intel_decryption_add = 2
+		intel_encryption_add = 2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_spy_2 = {
+
+	possible = {
+		has_tradition = tr_communist_spy_1
+	}
+
+	modifier = {
+		espionage_hostile_operation_difficulty_add = 5
+		espionage_hostile_operation_cost_mult = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_spy_3 = {
+	possible = {
+		has_tradition = tr_communist_spy_1
+	}
+	
+	modifier = {
+		espionage_operation_skill_add = 5
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_spy_4 = {
+	possible = {
+		has_tradition = tr_communist_spy_1
+		has_tradition = tr_communist_spy_2
+	}
+
+	modifier = {
+		spy_network_levels_add = 15
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_communist_spy_5 = {
+	possible = {
+		has_tradition = tr_communist_spy_2
+	}
+
+	modifier = {
+		spy_network_daily_value_mult = 0.50
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

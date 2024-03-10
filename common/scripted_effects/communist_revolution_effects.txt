@@ -1,0 +1,114 @@
+#改变为平等主义思潮
+communist_random_pop_change_ethic_to_egalitarian = {
+	random_owned_pop = {
+		limit = { NOT = { pop_has_ethic = ethic_egalitarian } }
+		pop_change_ethic = "ethic_egalitarian"
+	}
+}
+
+#建设社会主义国家
+build_communist_country = {
+	copy_ethos_and_authority = event_target:communist_country
+	end_rivalry = from
+	from = { end_rivalry = root }
+	every_owned_pop = {
+		pop_change_ethic = ethic_egalitarian
+	}
+	if = {
+		limit = {
+			has_civic = civic_galactic_sovereign
+		}
+		force_remove_civic = civic_galactic_sovereign
+	}
+	if = {
+		limit = {
+			has_civic = civic_galactic_sovereign_megacorp
+		}
+		force_remove_civic = civic_galactic_sovereign_megacorp
+	}
+	if = {
+		limit = {
+			has_civic = civic_psionic_sovereign
+		}
+		force_remove_civic = civic_psionic_sovereign
+	}
+	force_remove_civic = civic_shared_burden
+	force_remove_civic = civic_merchant_guilds
+	force_remove_civic = civic_diplomatic_corps
+	force_remove_civic = civic_functional_architecture
+	force_remove_civic = civic_byzantine_bureaucracy
+	force_remove_civic = civic_environmentalist
+	force_remove_civic = civic_idealistic_foundation
+	force_remove_civic = civic_mining_guilds
+	force_remove_civic = civic_memorialist
+	force_remove_civic = civic_reanimated_armies
+	force_remove_civic = civic_cutthroat_politics
+	force_remove_civic = civic_efficient_bureaucracy
+	force_remove_civic = civic_soviet
+	force_remove_civic = civic_planned_economy
+	force_remove_civic = civic_red_army
+	force_remove_civic = civic_sciences_academy
+	force_add_civic = civic_soviet
+	force_add_civic = civic_planned_economy
+	force_add_civic = civic_red_army
+	force_add_civic = civic_sciences_academy
+	add_modifier = { modifier = recently_liberated days = 7300 }
+	add_opinion_modifier = { modifier = opinion_liberated_us who = root }
+	root = {
+		add_opinion_modifier = { modifier = opinion_we_liberated who = from }
+	}
+}
+
+#被输出革命成为社会主义国家
+become_to_socialiste_country = {
+	copy_ethos_and_authority = root
+	end_rivalry = from
+	from = { end_rivalry = root }
+	every_owned_pop = {
+		pop_change_ethic = ethic_egalitarian
+	}
+	if = {
+		limit = {
+			has_civic = civic_galactic_sovereign
+		}
+		force_remove_civic = civic_galactic_sovereign
+	}
+	if = {
+		limit = {
+			has_civic = civic_galactic_sovereign_megacorp
+		}
+		force_remove_civic = civic_galactic_sovereign_megacorp
+	}
+	if = {
+		limit = {
+			has_civic = civic_psionic_sovereign
+		}
+		force_remove_civic = civic_psionic_sovereign
+	}
+	force_remove_civic = civic_shared_burden
+	force_remove_civic = civic_merchant_guilds
+	force_remove_civic = civic_diplomatic_corps
+	force_remove_civic = civic_functional_architecture
+	force_remove_civic = civic_byzantine_bureaucracy
+	force_remove_civic = civic_environmentalist
+	force_remove_civic = civic_idealistic_foundation
+	force_remove_civic = civic_mining_guilds
+	force_remove_civic = civic_memorialist
+	force_remove_civic = civic_reanimated_armies
+	force_remove_civic = civic_cutthroat_politics
+	force_remove_civic = civic_efficient_bureaucracy
+	force_remove_civic = civic_soviet
+	force_remove_civic = civic_planned_economy
+	force_remove_civic = civic_red_army
+	force_remove_civic = civic_sciences_academy
+	force_add_civic = civic_soviet
+	force_add_civic = civic_planned_economy
+	force_add_civic = civic_red_army
+	force_add_civic = civic_sciences_academy
+	add_modifier = { modifier = recently_liberated days = 7300 }
+	add_opinion_modifier = { modifier = opinion_liberated_us who = root }
+	root = {
+		add_opinion_modifier = { modifier = opinion_we_liberated who = from }
+	}
+}
+

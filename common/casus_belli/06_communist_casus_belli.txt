@@ -1,0 +1,37 @@
+#输出革命
+cb_communist_output_revolution = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		is_communist_country = yes
+	}
+	is_valid = {
+		from = { is_communist_country = no }
+		has_total_war_cb = no
+	}
+}
+
+#消灭法西斯
+cb_communist_exterminate_fascism = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_communist_country = yes
+	}
+	is_valid = {
+		has_total_war_cb = yes
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+		NOT = { is_overlord_to = FROM }
+		from = {
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+}

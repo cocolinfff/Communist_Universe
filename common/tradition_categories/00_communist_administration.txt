@@ -1,0 +1,23 @@
+tradition_communist_administration = {
+	potential = {
+		is_communist_country = yes
+	}
+	tree_template = "tree_21_11"
+	adoption_bonus = "tr_communist_administration_adopt"
+	finish_bonus = "tr_communist_administration_finish"
+	traditions = {
+		"tr_communist_administration_1"
+		"tr_communist_administration_2"
+		"tr_communist_administration_3"
+		"tr_communist_administration_4"
+		"tr_communist_administration_5"
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			is_communist_country = yes
+		}
+	}
+}

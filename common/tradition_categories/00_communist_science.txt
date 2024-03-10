@@ -1,0 +1,27 @@
+tradition_communist_science = {
+	potential = {
+		is_communist_country = yes
+	}
+	tree_template = "tree_11_111"
+	adoption_bonus = "tr_communist_science_adopt"
+	finish_bonus = "tr_communist_science_finish"
+	traditions = {
+		"tr_communist_science_1"
+		"tr_communist_science_2"
+		"tr_communist_science_3"
+		"tr_communist_science_4"
+		"tr_communist_science_5"
+	}
+
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 5
+			years_passed < 20
+		}
+		modifier = {
+			factor = 10
+			is_communist_country = yes
+		}
+	}
+}
