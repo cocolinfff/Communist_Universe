@@ -1,0 +1,22 @@
+spriteTypes = {	
+	############################
+	### AGREEMENT PRESENT ICONS ###
+	############################
+	
+	spriteType = {
+		name = "GFX_communist_Republics_subject"
+		texturefile = "gfx/interface/icons/diplomacys/communist_Republics_subject.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_diplomacy_specialist_subject_cmsl"
+		texturefile = "gfx/interface/icons/diplomacys/communist_Republics_subject.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_diplomacy_specialist_subject_cmsl_large"
+		texturefile = "gfx/interface/subjugation/specialists_icons/diplomacy_specialist_subject_cmsl_large.dds"
+		alwaystransparent = yes
+	}
+
+}

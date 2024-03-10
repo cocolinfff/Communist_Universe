@@ -1,0 +1,15 @@
+
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_evt_communist_five_year_plan"
+		texturefile = "gfx/event_pictures/five_year_plan.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+	spriteType = {
+		name = "GFX_evt_communist_federation_created"
+		texturefile = "gfx/event_pictures/communist_federation_created.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+}

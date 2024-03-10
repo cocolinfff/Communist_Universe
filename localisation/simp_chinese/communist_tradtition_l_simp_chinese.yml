@@ -1,0 +1,287 @@
+﻿l_simp_chinese:
+
+#传统
+
+#改造传统
+ tradition_communist_transform:0 "改造"
+ tradition_communist_transform_desc:0 "社会的发展到了今天的时代，正确地认识世界和改造世界的责任，已经历史地落在无产阶级及其政党的肩上。-《实践论》"
+
+ tr_communist_transform_adopt:0 "§B改造传统§!"
+ tr_communist_transform_adopt_delayed:0 "环球冷热不均平,世界贫富难相等, 全球青年团结一心,改造世界当尖兵！"
+
+ tr_communist_transform_finish:0 "§B改造§!"
+ tr_communist_transform_finish_desc:0 "开启决议§B改造世界§!允许你将殖民地改造为§Y25§!格大小的§G盖亚星球§!！"
+
+ tr_communist_transform_1:0 "循环利用"
+ tr_communist_transform_1_delayed:0 "回收在生产中浪费的资源，用于投入新一轮的在生产中。"
+
+ tr_communist_transform_2:0 "艰苦奋斗"
+ tr_communist_transform_2_delayed:0 "与天奋斗，其乐无穷！与地奋斗，其乐无穷！与人奋斗，其乐无穷！"
+
+ tr_communist_transform_3:0 "改造自然"
+ tr_communist_transform_3_delayed:0 "通过先进的科学技术，将一颗外星球改造为更为宜居的居住地以及成为可能。"
+
+ tr_communist_transform_4:0 "星球大开发"
+ tr_communist_transform_4_delayed:0 "因地制宜的适当开发荒地，变废为宝。"
+
+ tr_communist_transform_5:0 "号召无产阶级"
+ tr_communist_transform_5_delayed:0 "如果没有广大无产阶级的投入，那么改造一个新世界就会成为空谈。"
+
+#联合传统
+ tradition_communist_unite:0 "联合"
+ tradition_communist_unite_desc:0 "全世界无产者，联合起来！-《共产党宣言》"
+
+ tr_communist_unite_adopt:0 "§R联合传统§!"
+ tr_communist_unite_adopt_delayed:0 "胸怀[From.GetName]，放眼银河，共产主义是我们的理想。"
+
+ tr_communist_unite_finish:0 "§R联合§!"
+ tr_communist_unite_finish_desc:0 ""
+
+ tr_communist_unite_1:0 "联合起来"
+ tr_communist_unite_1_desc:0 "§Y解锁外交选项：§!建立联邦"
+ requires_tradition_communist_unite:0 "需要传统：§R联合起来§!"
+ tr_communist_unite_1_delayed:0 "无数的失败证明了如果无产阶级不团结起来就无法对抗资产阶级的一次又一次围剿，团结合作，我们就能比以往更加牢不可破。"
+
+ tr_communist_unite_2:0 "诚挚合作"
+ tr_communist_unite_2_delayed:0 "友谊建立在同志中，巩固在真挚上，发展在批评里，断送在奉承中。"
+
+ tr_communist_unite_3:0 "灵活外交"
+ tr_communist_unite_3_delayed:0 "星海中敌视我们的国家不在少数，我们需要时间去缓解对外关系，从而为我们的发展赢得时间。"
+
+ tr_communist_unite_4:0 "阶级友谊"
+ tr_communist_unite_4_delayed:0 "工人没有祖国，社会主义国家不需要设计任何壁垒，阶级友谊高于一切。"
+
+ tr_communist_unite_5:0 "扩大影响力"
+ tr_communist_unite_5_delayed:0 "我们必须尽力扩大自己在整个银河的影响力，为在别国的无产阶级谋得更多的利益。"
+
+#远视传统
+ tradition_communist_science:0 "远视"
+ tradition_communist_science_desc:0 "科学绝不是一种自私自利的享乐，有幸能够致力于科学研究的人，首先应该拿自己的学识为人类服务。-马克思"
+
+ tr_communist_science_adopt:0 "§B远视传统§!"
+ tr_communist_science_adopt_delayed:0 "科学所以叫作科学，正是因为它不承认偶像，不怕推翻过时的旧事物，很仔细地倾听实践和经验的呼声。"
+
+ tr_communist_science_finish:0 "§B远视§!"
+ tr_communist_science_finish_desc:0 ""
+
+ tr_communist_science_1:0 "细致入微"
+ tr_communist_science_1_delayed:0 "一个崭新的探索纪元摆在我们的前方。\n一个充满未知的宇宙如果我们不仔细探索，那么我们为何要仰望星辰大海呢？"
+
+ tr_communist_science_2:0 "星际考古学"
+ tr_communist_science_2_delayed:0 "每一个覆灭的外星文明的遗物都会给予我们无数前人的经验，我们需要一个专门的考古流程来保护这些遗物免受损伤。"
+
+ tr_communist_science_3:0 "科研先锋队"
+ tr_communist_science_3_delayed:0 "宇宙中危机四伏，我们需要无产阶级中的先进积极分子再次站出来，像以前一样冲锋在第一线。"
+
+ tr_communist_science_4:0 "义务教育改革"
+ tr_communist_science_4_delayed:0 "在这个科学日新月异的技术爆炸时代，我们无产阶级也必须掌握最先进的科学技术，对义务教育的改革必将诞生一批更为专业的领导者。"
+
+ tr_communist_science_5:0 "科学技术委员会"
+ tr_communist_science_5_delayed:0 "光荣啊，展望未来的人！"
+
+#行政传统
+ tradition_communist_administration:0 "行政"
+ tradition_communist_administration_desc:0 "只有当全体居民都参加管理工作时，才能彻底进行反官僚主义的斗争，才能完全战胜官僚主义。- 列宁"
+
+ tr_communist_administration_adopt:0 "§Y行政传统§!"
+ tr_communist_administration_adopt_delayed:0 "一切权力归于苏维埃！"
+
+ tr_communist_administration_finish:0 "§Y行政§!"
+ tr_communist_administration_finish_desc:0 ""
+
+ tr_communist_administration_1:0 "扩大基层自治苏维埃"
+ tr_communist_administration_1_delayed:0 "推动苏维埃的自治，我们的联盟将更为开放与自由。"
+
+ tr_communist_administration_2:0 "社会主义价值观"
+ tr_communist_administration_2_delayed:0 "富强的联盟,民主的联盟,自由的联盟，平等的家园。"
+
+ tr_communist_administration_3:0 "高效传递"
+ tr_communist_administration_3_delayed:0 "从最高苏维埃发出的法令与决议将会以最快的速度飞向各大基层苏维埃。"
+
+ tr_communist_administration_4:0 "集体与社会"
+ tr_communist_administration_4_delayed:0 "自由平等的社会环境换来了劳动人民极高的劳动积极性。"
+
+ tr_communist_administration_5:0 "动态管理"
+ tr_communist_administration_5_delayed:0 "基层苏维埃进行灵活的处理各种事务，从而提高了行政效率。"
+
+#扩张传统
+ tradition_communist_expansion:0 "扩张"
+ tradition_communist_expansion_desc:0 "地球是人类的摇篮，但是人类不能永远生活在摇篮里，开始他将小心翼翼地穿出大气层，然后便去征服太阳系。- 齐奥尔科夫斯基"
+
+ tr_communist_expansion_adopt:0 "§Y扩张传统§!"
+ tr_communist_expansion_adopt_delayed:0 "我们的所有知识，无论是过去、现在、还是未来的，都远远比不上我们无法知道的。"
+
+ tr_communist_expansion_finish:0 "§Y扩张§!"
+ tr_communist_expansion_finish_desc:0 ""
+
+ tr_communist_expansion_1:0 "仰望星空"
+ tr_communist_expansion_1_delayed:0 "宇宙是[From.GetName]最后的边疆，也是共产主义从未踏入的新领域！"
+
+ tr_communist_expansion_2:0 "建设新世界"
+ tr_communist_expansion_2_delayed:0 "新世界生产资料和生活资料的缺乏让我们需要投入更多的人口去建设。"
+
+ tr_communist_expansion_3:0 "探索星辰"
+ tr_communist_expansion_3_delayed:0 "我们早就知道了宇宙中资源的丰富，而探索这些资源则是我们建设共产主义社会的基础要求。"
+
+ tr_communist_expansion_4:0 "触摸星辰"
+ tr_communist_expansion_4_delayed:0 "宇宙是无尽的生命,丰富的动力,但它同时也是严整的秩序,圆满的和谐。"
+
+ tr_communist_expansion_5:0 "促进人口增长"
+ tr_communist_expansion_5_delayed:0 "新世界的劳动力严重不足，我们可以出台相关政策促进人口增长来更快更好的建设新世界。"
+
+ #道德传统
+ tradition_communist_morality:0 "道德"
+ tradition_communist_morality_desc:0 "只有在不仅消灭了阶级对立，而且在实际生活中也忘却了这种对立的社会发展阶段上，超越阶级对立和超越这种对立的回忆的、真正人的道德才成为可能。- 恩格斯"
+
+ tr_communist_morality_adopt:0 "§Y道德传统§!"
+ tr_communist_morality_adopt_delayed:0 "我能为明天做些什么？"
+
+ tr_communist_morality_finish:0 "§Y道德§!"
+ tr_communist_morality_finish_desc:0 ""
+
+ tr_communist_morality_1:0 "全民疗养"
+ tr_communist_morality_1_delayed:0 "早在踏入群星之前全民疗养已经成为了我们的生活习惯，让我们的人民获得了远超以往的寿命。"
+
+ tr_communist_morality_2:0 "自由择业"
+ tr_communist_morality_2_delayed:0 ""高度发达的教育体系让我们实现了每一个个体的自由与全面发展，从而可以应对任何岗位的需求。"
+
+ tr_communist_morality_3:0 "路不拾遗"
+ tr_communist_morality_3_delayed:0 "[From.GetName]是无产阶级的灯塔，在这里，一切吸血鬼与好吃懒做的害虫是不允许存在的！"
+
+ tr_communist_morality_4:0 "集体思维"
+ tr_communist_morality_4_delayed:0 "我们的人民不再只为自己的利益着想，而是为整个无产阶级的利益着想。"
+
+ tr_communist_morality_5:0 "共产主义之梦"
+ tr_communist_morality_5_delayed:0 "或许我们这一代无法见证共产主义的实现，但只要我们不断努力，那么共产主义终有一天将会实现。"
+
+ #计划传统
+ tradition_communist_plan:0 "计划"
+ tradition_communist_plan_desc:0 "只要存在着市场经济，只要还保持着货币权力和资本力量，世界上任何法律也无力消灭不平等和剥削。只有实行巨大的社会化的计划经济制度，同时把所有的土地、工厂、工具的所有权转交给工人阶级，才能消灭一切剥削。- 列宁"
+
+ tr_communist_plan_adopt:0 "§Y计划传统§!"
+ tr_communist_plan_adopt_delayed:0 "为集体农庄呀，愉快劳动活泼紧张。"
+
+ tr_communist_plan_finish:0 "§Y计划§!"
+ tr_communist_plan_finish_desc:0 ""
+
+ tr_communist_plan_1:0 "贸易保护"
+ tr_communist_plan_1_delayed:0 "[From.GetName]的财产属于全体[From.GetName]劳动人民，对这些财产进行保护是我们的责任。"
+
+ tr_communist_plan_2:0 "深空采矿"
+ tr_communist_plan_2_delayed:0 "宇宙中的资源远比我们想象的要多，挖掘更多的资源用于建设我们的社会主义。"
+
+ tr_communist_plan_3:0 "社会化生产"
+ tr_communist_plan_3_desc:0 "全国的§Y能量币§!§Y矿物§!§Y食物§!§Y消费品§!§Y合金§!资源产出增加§G+20%§!"
+ tr_communist_plan_3_delayed:0 "完成生产资料的社会化、生产过程的社会化、产品的社会化，[From.GetName]将会更加富强。"
+
+ tr_communist_plan_4:0 "先进资源大生产"
+ tr_communist_plan_4_delayed:0 "先进的资源是发展的前提，而如何社会化生产这些资源则需要计划委员会的精打细算。"
+
+ tr_communist_plan_5:0 "购买生产资料"
+ tr_communist_plan_5_delayed:0 "泛银河市场的庞大让我们有机会购买大量的生产资料用于[From.GetName]的社会主义建设。"
+
+ #建设传统
+ tradition_communist_build:0 "建设"
+ tradition_communist_build_desc:0 "要建设，就必须有知识，必须掌握科学。而要有知识，就必须学习，顽强地、耐心地学习。向所有的人学习，不论向敌人或朋友都要学习，特别是向敌人学习。 - 斯大林"
+
+ tr_communist_build_adopt:0 "§Y建设传统§!"
+ tr_communist_build_adopt_delayed:0 "延缓速度就是落后，而落后者是要挨打的。"
+
+ tr_communist_build_finish:0 "§Y建设§!"
+ tr_communist_build_finish_desc:0 ""
+
+ tr_communist_build_1:0 "解决能源问题"
+ tr_communist_build_1_desc:0 "开启星球决议§R建设核电站§!，允许在星球上添加更多的发电区划。"
+ tr_communist_build_1_delayed:0 "充足的能源将是我们迈向共产主义的坚实基础。"
+
+ tr_communist_build_2:0 "建造模板"
+ tr_communist_build_2_delayed:0 "通用的建造模型可以更快速的建设社会主义。"
+
+ tr_communist_build_3:0 "解决矿物问题"
+ tr_communist_build_3_desc:0 "开启星球决议§R寻找矿脉§!，允许在星球上添加更多的采矿区划。"
+ tr_communist_build_3_delayed:0 "充足的矿物将是我们迈向共产主义的坚实基础。"
+
+ tr_communist_build_4:0 "解决粮食问题"
+ tr_communist_build_4_desc:0 "开启星球决议§R建设水培农场§!，允许在星球上添加更多的农业区划。"
+ tr_communist_build_4_delayed:0 "如果饿着肚子，那我们如何建设社会主义呢？"
+
+ tr_communist_build_5:0 "工人监督"
+ tr_communist_build_5_delayed:0 "由建设工人与人民共同监督工程建设极大程度上减少了投机行为。"
+
+ #肃反传统
+ tradition_communist_spy:0 "肃反"
+ tradition_communist_spy_desc:0 "别以为我会寻求革命的公道途径。我们不需要公道，是面对面的战争，是你死我活的战争。我建议并请求建立一个同反革命进行革命清算的机构。- 捷尔任斯基"
+
+ tr_communist_spy_adopt:0 "§Y肃反§!"
+ tr_communist_spy_adopt_delayed:0 "我们代表的是自身组织的恐怖主义——这话要先说清楚。实施恐怖政治，逮捕和消灭阶级敌人，消灭他们在革命前所的扮演的角色，消灭他们的阶级联盟，消灭他们的肉体和精神。"
+
+ tr_communist_spy_finish:0 "§Y肃反§!"
+ tr_communist_spy_finish_desc:0 "当§R先锋队腐化§!危机发生时，§H解锁肃反运动§!用于减缓先锋队腐化。"
+
+ tr_communist_spy_1:0 "保密与破译"
+ tr_communist_spy_1_delayed:0 "对待阶级敌人就像对待最坏的敌人，情报的多少将会决定我们与阶级敌人的胜负。"
+
+ tr_communist_spy_2:0 "红色利剑"
+ tr_communist_spy_2_delayed:0 "我们与正义同行,嗅出并铲除叛徒!"
+
+ tr_communist_spy_3:0 "优秀间谍"
+ tr_communist_spy_3_delayed:0 "我们的间谍仅需面包与清水即可工作，高尚的精神让资本主义的间谍黯然失色。"
+
+ tr_communist_spy_4:0 "天下何人不通共"
+ tr_communist_spy_4_delayed:0 "我们的同志遍布五湖四海，为了同一个理想而奋斗。"
+
+ tr_communist_spy_5:0 "行走黑暗"
+ tr_communist_spy_5_delayed:0 "我们的间谍行走于黑暗，为了全体劳动人民更美好的明天而努力。"
+
+ #革命传统
+ tradition_communist_revolution:0 "革命"
+ tradition_communist_revolution_desc:0 "如果反对派自己解除武装，很好。如果他们拒绝这样做，我们就帮他们解除。 - 斯大林"
+
+ tr_communist_revolution_adopt:0 "§R革命传统§!"
+ tr_communist_revolution_adopt_desc:0 "§R整个银河拿起武器来反对我们§!，§R但我们绝不会止步不前§!，§R我们是无产阶级的未来§!！\n§R同志们§!，§R为了每个受压迫者而战§!！\n§H解锁间谍行动§!：§R引导革命§!\n这将允许你在别国发起§R社会主义革命§!！"
+
+ tr_communist_revolution_finish:0 "§R革命§!"
+ tr_communist_revolution_finish_desc:0 "§H解锁战争借口§!：§R输出革命§!\n飞升天赋已解锁：§G+1§!\n§R工人和农民们§!，§R我们已经受够了痛苦和屈辱§!，§R让我们向该死的剥削者报仇雪恨吧§!！"
+
+ tr_communist_revolution_1:0 "优势火力"
+ tr_communist_revolution_1_delayed:0 "人命关天，但子弹廉价。"
+
+ tr_communist_revolution_2:0 "纵深突破"
+ tr_communist_revolution_2_delayed:0 "只要在对面的国土防线上撕开一个口子，我们的红军就会长驱直入，那些资本家将会望风而逃。"
+
+ tr_communist_revolution_3:0 "革命军事学院"
+ tr_communist_revolution_3_delayed:0 "我们将成为革命的摇篮，从这里走出的军事人才将会成为资产阶级最为恐惧的利剑。"
+
+ tr_communist_revolution_4:0 "百战之师"
+ tr_communist_revolution_4_delayed:0 "历史表明没有无敌的军队，从来没有。"
+
+ tr_communist_revolution_5:0 "宣传手段"
+ tr_communist_revolution_5_desc:0 "§H解锁轨道轰炸类型§!：§Y宣传思想§!。"
+ tr_communist_revolution_5_delayed:0 "思想比武器更有威力。我们是绝不会给敌人武器。难道我们会让敌人有思想？"
+
+ #斗争传统
+ tradition_communist_struggle:0 "斗争"
+ tradition_communist_struggle_desc:0 "以斗争求和平则和平存，以妥协求和平则和平亡。 - 毛泽东"
+
+ tr_communist_struggle_adopt:0 "§R斗争传统§!"
+ tr_communist_struggle_adopt_desc:0 "军民团结如一人，试看天下谁能敌！"
+
+ tr_communist_struggle_finish:0 "§R斗争§!"
+ tr_communist_struggle_finish_desc:0 ""
+
+ tr_communist_struggle_1:0 "军民团结"
+ tr_communist_struggle_1_delayed:0 "军民团结如一人，试看天下谁能敌！"
+
+ tr_communist_struggle_2:0 "一步也不后退"
+ tr_communist_struggle_2_delayed:0 "在[Root.GetName]的军队里，撤退比前进更需要勇气！"
+
+ tr_communist_struggle_3:0 "人民战争"
+ tr_communist_struggle_3_delayed:0 "让敌人陷入人民群众的汪洋大海之中！"
+
+ tr_communist_struggle_4:0 "纵深防御"
+ tr_communist_struggle_4_delayed:0 "[Root.GetName]虽大，但已无路可退，我们的身后就是[Root.Capital.GetName]！"
+
+ tr_communist_struggle_5:0 "钢铁长城"
+ tr_communist_struggle_5_delayed:0 "不是[Root.GetName]惧怕死亡，而是死亡惧怕[Root.GetName]！"
+
+

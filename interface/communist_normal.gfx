@@ -1,0 +1,25 @@
+
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_origin_soviet_union"
+		texturefile = "gfx/event_pictures/origins/origin_soviet_union.dds"
+		alwaystransparent = yes		
+	}
+}
+
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_wg_communist_output_revolution"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_communist_output_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_wg_communist_exterminate_fascism"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_communist_output_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_comintern_federation"
+		texturefile = "gfx/interface/icons/federation/federation_types/comintern_federation.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+}

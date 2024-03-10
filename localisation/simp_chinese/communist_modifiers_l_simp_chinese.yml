@@ -1,0 +1,23 @@
+﻿l_simp_chinese:
+
+#修正
+communist_modifier_five_year_plan_energy:0 "五年计划：能源侧重"
+communist_modifier_five_year_plan_energy_desc:0 "未来五年内，国家将侧重于能量币的生产。"
+
+communist_modifier_five_year_plan_minerals:0 "五年计划：矿物侧重"
+communist_modifier_five_year_plan_minerals_desc:0 "未来五年内，国家将侧重于矿物的生产。"
+
+communist_modifier_five_year_plan_foods:0 "五年计划：食物侧重"
+communist_modifier_five_year_plan_foods_desc:0 "未来五年内，国家将侧重于食物的生产。"
+
+communist_modifier_five_year_plan_consumer_goods:0 "五年计划：消费品侧重"
+communist_modifier_five_year_plan_consumer_goods_desc:0 "未来五年内，国家将侧重于消费品的生产。"
+
+communist_modifier_five_year_plan_alloys:0 "五年计划：合金侧重"
+communist_modifier_five_year_plan_alloys_desc:0 "未来五年内，国家将侧重于合金的生产。"
+
+l_simp_chinese:
+ opinion_commuist_socialism_pos_1:0"我们的同志"
+ opinion_commuist_socialism_pos_2:0"修正主义叛徒"
+ opinion_commuist_capitalism_neg_1:0"资本主义剥削者"
+ opinion_commuist_capitalism_neg_2:0"该死的暴民"

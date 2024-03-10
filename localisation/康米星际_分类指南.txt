@@ -1,0 +1,30 @@
+按字母顺序排序
+
+communist_ascension_perks_l_xx: 飞升相关
+communist_buildings_l_xx: 建筑
+communist_civics_l_xx: 国策/民政
+communist_colonies_l_xx: 殖民地类型
+communist_decisions_l_xx: 决策
+communist_deplomatics_l_xx: 外交和战争
+communist_deposits_l_xx: 地块
+communist_districts_l_xx: 区划
+communist_edicts_l_xx: 法令
+communist_communists_l_xx: 思潮相关
+communist_events_l_xx: 事件
+communist_events_l_plot_xx:0 “你好亲爱的同志”
+communist_galactics_l_xx: 共同体和帝国相关
+communist_governments_l_xx: 政体文本和领导人名称
+communist_jobs_l_xx: 岗位
+communist_modifiers_l_xx: 修正相关
+communist_name_lists_l_xx: 名称列表
+communist_origins_l_xx: 起源和起源专属的科技、建筑等
+communist_policies_l_xx: 政策
+communist_pop_factions_l_xx: 派系相关
+communist_projects_l_xx: 异常现象和特殊项目
+communist_situations_l_xx: 情况
+communist_technologies_l_xx: 科技
+communist_tooltips_l_xx: 复用的备注，不复用的放到用的地方
+communist_traditions_l_xx: 传统
+communist_traits_l_xx: 特质
+
+communist_others_l_xx: 杂项，不知道放哪的

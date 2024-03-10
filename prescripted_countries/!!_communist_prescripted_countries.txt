@@ -1,0 +1,75 @@
+﻿communist = {
+	name = "soviet_union"
+	spawn_enabled = yes # yes / no / always
+	spawn_as_fallen = yes
+	#ignore_portrait_duplication=yes
+	
+	ship_prefix = "CCCP"
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "PRESCRIPTED_species_name_humans1"
+		plural = "PRESCRIPTED_species_plural_humans1"
+		adjective = "PRESCRIPTED_species_adjective_humans1"
+		name_list = "COMMUNIST"
+		trait = "trait_adaptive"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+
+	adjective = "PRESCRIPTED_adjective_humans1"
+	
+	authority="auth_democratic"
+	government="gov_communist_leninism"
+	origin="origin_soviet_union"
+	advisor_voice_type="l_the_worker"
+	ethic="ethic_fanatic_egalitarian"
+	ethic="ethic_materialist"
+	civics={
+		#"civic_soviet"
+		"civic_planned_economy"
+	}
+	authority = { auth_democratic_centralism }
+
+	flags = { communist_leninism_flag custom_start_screen communist_humans_flag }
+	
+	
+	planet_name = "NAME_Earth"
+	planet_class="pc_continental"
+	initializer = "sol_system_initializer"
+	system_name = "NAME_Sol"
+	
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+	
+	empire_flag={
+		icon={
+			category="communist"
+			file="communist_5.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"red"
+			"red"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_humans3"
+		portrait = "human_female_04"
+		gender = female
+		texture = 0
+		attachment = 7
+		clothes = 5
+		leader_class = ruler
+	}
+	
+	room="communist_1_room"
+	
+}

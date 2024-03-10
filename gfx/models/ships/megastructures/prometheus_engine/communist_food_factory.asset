@@ -1,0 +1,17 @@
+entity = {
+	name = "prometheus_engine_02_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }	
+	
+	attach = { "root" = "mammalian_01_dyson_sphere_frame_entity" }
+
+
+	locator = { name = "arms1"  position = { 60 30 0 } rotation = { 0 270 0 } }
+	attach = { arms1 = "mammalian_01_colossus_rings_entity" }	
+
+	locator = { name = "arms2"  position = { -60 30 0 } rotation = { 0 270 0 } }
+	attach = { arms2 = "mammalian_01_colossus_rings_entity" }
+	
+	scale = 1.0
+	cull_radius = 500
+	
+}

@@ -1,0 +1,53 @@
+sound = {
+	name = "event_communist_international_call"
+	file = "event/event_communist_international_call.wav"
+	volume = 0.5
+}
+
+sound = {
+	name = "event_communist_fall_of_soviet_union"
+	file = "event/event_communist_fall_of_soviet_union.wav"
+	volume = 0.5
+}
+
+sound = {
+	name = "event_communist_revolution_success"
+	file = "event/event_communist_revolution_success.wav"
+	volume = 0.5
+}
+
+sound = {
+	name = "event_communist_automation"
+	file = "event/event_communist_automation.wav"
+	volume = 0.5
+}
+
+sound = {
+	name = "event_bolshevik"
+	file = "event/event_bolshevik.wav"
+	volume = 0.5
+}
+
+sound = {
+	name = "event_rebuild_red_army"
+	file = "event/event_rebuild_red_army.wav"
+	volume = 0.5
+}
+
+sound = {
+	name = "event_glorious_guide"
+	file = "event/event_glorious_guide.wav"
+	volume = 0.5
+}
+
+sound = {
+	name = "event_communist_prometheus"
+	file = "event/event_communist_prometheus.wav"
+	volume = 0.5
+}
+
+sound = {
+	name = "event_communist_time_go"
+	file = "event/event_communist_time_go.wav"
+	volume = 0.5
+}

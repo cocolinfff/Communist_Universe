@@ -1,0 +1,90 @@
+
+soundeffect = {
+	name = event_communist_international_call
+	sounds = {
+		sound = event_communist_international_call
+	}
+	volume = 1.5
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = event_communist_fall_of_soviet_union
+	sounds = {
+		sound = event_communist_fall_of_soviet_union
+	}
+	volume = 1.5
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = event_communist_revolution_success
+	sounds = {
+		sound = event_communist_revolution_success
+	}
+	volume = 1.5
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = event_communist_automation
+	sounds = {
+		sound = event_communist_automation
+	}
+	volume = 1.5
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = event_bolshevik
+	sounds = {
+		sound = event_bolshevik
+	}
+	volume = 1.5
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = event_rebuild_red_army
+	sounds = {
+		sound = event_rebuild_red_army
+	}
+	volume = 1.5
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = event_glorious_guide
+	sounds = {
+		sound = event_glorious_guide
+	}
+	volume = 1.5
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = event_communist_prometheus
+	sounds = {
+		sound = event_communist_prometheus
+	}
+	volume = 1.5
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = event_communist_time_go
+	sounds = {
+		sound = event_communist_time_go
+	}
+	volume = 1.5
+	max_audible = 1
+	max_audible_behaviour = fail
+}

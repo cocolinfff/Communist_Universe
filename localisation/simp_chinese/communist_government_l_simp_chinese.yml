@@ -1,0 +1,88 @@
+﻿#政府
+l_simp_chinese:
+
+#政体以及国家理念
+
+ auth_democratic_centralism:0 "民主集中制"
+ auth_democratic_centralism_desc:0 "在集中指导下的民主和在民主基础上的集中相结合的制度。"
+ AUTHORITY_HAS_COMMUNIST:0 "每§Y5§!年进行一次选举，选举产生新的领导人。"
+
+ civic_soviet:0"先锋队理论"
+ civic_soviet_desc:0"列宁提出总结的一套无产阶级专政实现方法的理论，挑选无产阶级中的先进分子，在当前社会条件下建立本阶级的先锋队以推动和保卫革命。"
+
+ civic_communist_soviet:0"委员会共产主义"
+ civic_communist_soviet_desc:0"卢森堡提出总结的一套无产阶级专政实现方法的理论，自由与民主紧密地联系起来，认为自由是实现社会主义民主的前提。"
+
+ civic_planned_economy:0"计划经济体制"
+ civic_planned_economy_desc:0"指令型计划经济是对生产、资源分配以及产品消费事先进行计划的经济体制。是社会主义国家的基础经济体制。"
+
+ civic_red_army:0"星际红军"
+ civic_red_army_desc:0"红军是隶属于无产阶级的军事武装力量，是一只正规化的无产阶级军队，用于保卫无产阶级的胜利果实。"
+
+ civic_sciences_academy:0"国家科学院"
+ civic_sciences_academy_desc:0"国家科学院是社会主义国家最高学术机构和科学机关，负责直辖全国科学活动，以便按照国家计委编制的国民经济发展计划要求，确定国家科学研究的总方向。"
+
+ personality_ai_communist_leninism:0"社会主义国家"
+ personality_ai_communist_leninism_desc:0"社会主义国家崇尚国际主义，主张对外界的资本主义国家实行意识形态和革命输出，会和别的社会主义国家组成联盟来对抗资本主义，目标是实现物种的自由与全面发展.建立无阶级的平等社会。"
+
+#初始国家设定
+ soviet_union:0 "苏维埃社会主义共和国联盟"
+ EMPIRE_DESIGN_soviet_union:0 "苏维埃社会主义共和国联盟"
+
+ communist_prime:0 "最高苏维埃主席团主席"
+
+ gov_communist_leninism:0 "社会主义国家"
+ gov_communist_leninism_desc:0 "社会主义国家崇尚国际主义，主张对外界的资本主义国家实行意识形态和革命输出，会和别的社会主义国家组成联盟来对抗资本主义，目标是实现物种的自由与全面发展.建立无阶级的平等社会。"
+ #gov_ai_communist_leninism:0 "先锋队"
+ #gov_ai_communist_leninism_desc:0 "列宁提出总结的一套无产阶级专政实现方法的理论，挑选无产阶级中的先进分子，在当前社会条件下建立本阶级的先锋队以推动和保卫革命。"
+
+ PRESCRIPTED_ruler_title_communist_prime:0 "最高苏维埃主席团主席"
+ PRESCRIPTED_ruler_communist_prime:0 "最高苏维埃主席团主席"
+ councilor_ruler_communist_leader:0 "人民代表"
+
+ name_list_COMMUNIST:0 "人类（无产阶级）"
+ FLAG_CATEGORY_communist:0 "共产主义"
+ PRESCRIPTED_ruler_name_humans3:0 "约瑟夫·尼古拉耶维奇·屠格涅夫"
+
+#起源
+ origin_soviet_union:0"苏维埃社会主义共和国联盟"
+ origin_soviet_union_desc:0"透过不断的革命与斗争，这个文明完成了初步建设社会主义的理想，众多的社会主义国家组成了庞大的政治实体并实际上领导着这个文明，现在，他们有着一条光明的未来，通向共产主义的未来。"
+
+ origin_communist_revolution:0"共产主义革命"
+ origin_communist_revolution_desc:0"这个国家自阶级矛盾重重的国家中由无产阶级领导的革命而来，他们的父辈祖辈在帝国主义和资本主义的压迫下受尽折磨，是时候让这群老爷清楚他们的位置了！"
+
+ civic_tooltip_soviet_union_effects:0 ""
+
+ start_screen_soviet_union_humans:0 "现代人类约20万年前在非洲形成以来发生了许多事。我们的物种迅速扩散到全球并形成了最早的文明。\n\n科技快速发展，虽然并非毫无代价。在原子被驯服之前，战争已常常夺取数百万计的生命，二十世纪早期一个接一个的红色幽灵出现在了这个世界上，但在第一代领导人逝世以后，旧势力卷土重来，所有的社会主义国家出现了”卫星上天，红旗落地“的悲剧。复辟之后走资派们依靠着前社会主义国家的工业基础，走向了社会帝国主义的道路，时间就这样来到了二十一世纪而动荡的21世纪见证了苏维埃社会主义共和国联盟与共产国际在维护稳定的努力中的不断扩展。22世纪早期，全体社会主义国家加入了苏维埃社会主义共和国联盟并实质上成为了整个地球的领导者。\n\n这个庞大的社会主义国家联盟资助的研究项目带来了革命性的科技突破。随着第一批真正的星际舰船的完工，人类即将踏进太空探索的新时代！但是联盟内部矛盾重重，残余的走资派已经混入到苏维埃联盟的高层，新兴的政治势力试图按照他们的理念指导联盟未来的方向，联盟的未来将会走向何方？"
+
+ start_screen_soviet_union:0 "亿万年前，最初的原始[GetSpeciesName]物种在[GetHomeWorldName]诞生。自那时起，我们的文明就开始传播并慢慢走向繁荣。\n\n虽然我们早期的社会往往都是由精英阶层统治着平民阶层，但是随着时间的推进，我们的社会逐渐诞生出了一种实现所有物种自由与全面发展的无阶级意识形态。此哲学体系成为了我们的文化的主导价值观，同时成为了我们的现代社会的发展基石。\n\n尽管内部矛盾重重，历史中残余的精英阶层思想仍旧妄图颠覆这个无阶级社会。\n\n现在，随着超空间航道网的发现，[GetName]中最优秀的头脑们完成了最初的超空间引擎的开发。这一天，我们终于向星辰大海迈出了第一步！"
+ 
+#议程
+ agenda_communist_inner_party_democracy:0 "推动党内民主"
+ agenda_communist_five_year_plan_overfulfilled:0 "超额完成五年计划"
+ agenda_communist_improving_life_quality:0 "提升生活质量"
+ agenda_communist_defended_soviet:0 "保卫苏维埃！"
+ agenda_communist_export_revolution:0 "输出革命"
+ agenda_communist_internationalism:0 "宣传星际主义"
+
+#决议
+
+decision_communist_build_energy_deposit:"建设核电站"
+decision_communist_build_energy_deposit_desc:0"能源问题一直阻碍着我们向更高层次的社会前进，建设大量的可控核聚变反应堆或许可以解决这个问题。"
+decision_communist_build_energy_deposit_effects:"§H为星球添加星球特征§!：§Y核电站§!"
+
+decision_communist_build_minerals_deposit:"探寻矿脉"
+decision_communist_build_minerals_deposit_desc:0"各种各样的稀有金属在我们的社会建设中至关重要，我们需要探寻更多的矿脉来解决矿物短缺的问题。"
+decision_communist_build_minerals_deposit_effects:"§H为星球添加星球特征§!：§R地心矿脉§!"
+
+decision_communist_build_food_deposit:"建设水培农场"
+decision_communist_build_food_deposit_desc:0"如果我们的人民在忍饥挨饿，那么我们存在的意义是什么呢？必须实现食物自由，不然建设共产主义甚至社会主义都将成为空话！"
+decision_communist_build_food_deposit_effects:"§H为星球添加星球特征§!：§G水培农场§!"
+
+decision_communist_change_world:"改造世界"
+decision_communist_change_world_desc:0"环球冷热不均平,世界贫富难相等, 全球青年团结一心,改造世界当尖兵！"
+decision_communist_change_world_effects:"将小于§Y25§!格大小的殖民地改造为§Y25§!格大小的§G盖亚星球§!！"
+
+decision_communist_build_workerers_world:"建设工人理想城"
+decision_communist_build_workerers_world_desc:0"无边无际的理想城覆盖了行星上的每一个角落，形成一个自由家园，一个无产阶级之城。"
+decision_communist_build_workerers_world_effects:"将星球建设为§Y工人理想城§!"

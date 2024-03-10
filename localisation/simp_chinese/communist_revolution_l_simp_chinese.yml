@@ -1,0 +1,77 @@
+﻿l_simp_chinese:
+
+#对外革命战争的战争借口
+ war_goal_wg_communist_output_revolution:0 "输出革命"
+ war_goal_wg_communist_output_revolution_desc:0 "§R社会主义革命万岁！让我们扫除世间的暴力，消灭新世界的敌人！战斗！§!"
+ communist_output_revolution_accept:0 "§R无产阶级需要向剥削者讨回一切应有的东西！§!\n§R把压迫者吊死在路灯上！必须建立无产阶级专政！§!"
+ casus_belli_cb_communist_output_revolution:0 "输出革命"
+
+ war_goal_wg_communist_exterminate_fascism:0 "消灭法西斯"
+ war_goal_wg_communist_exterminate_fascism_desc:0 "§R消灭法西斯匪帮，胜利属于人民！§!"
+ casus_belli_cb_communist_exterminate_fascism:0 "消灭法西斯"
+
+ bombardment_communist_orbital_lunch_brochure:0 "宣传思想"
+ bombardment_communist_orbital_lunch_brochure_desc:2 "$bombardment_communist_orbital_lunch_brochure$轰炸只会投放书籍，不会造成平民伤亡。\n—对§Y军团§!造成§Y高度§!伤害\n—对§Y星球§!造成§Y低度§!伤害\n—对§Y人口§!§E不会造成§!伤害\n—§R不会§!轰炸不设防的星球\n—§R不会§!消灭最后的§Y$MIN_POPS$§!个人口"
+
+#引导革命爆发相关事件链
+ operation_induce_communist_revolution:0"引导革命"
+ operation_induce_communist_revolution_desc:0"我们深知目标国内的无产阶级群众正在经历着深重的苦难，起来，饥寒交迫的奴隶！"
+ operation_induce_communist_revolution_on_success:0"$IF_SUCCESSFUL|E$\n5年内，目标国内的§G平等主义思潮吸引力§!将得到一定程度的§G提升§!\n同时，他们将建立属于自己的§R社会主义国家§!！\n如果失败，将会导致一段时间内目标国的工人运动低潮。\n如果被镇压，那将有一定几率爆发更大规模的革命。"
+ target_communist_revolution_are_being_considered:0"$TRIGGER_FAIL$目标已经在被我们引导发动无产阶级革命中了！"
+ target_communist_revolution_was_failed:0"$TRIGGER_FAIL$目标正在血腥镇压无产阶级革命，现在再介入只会导致革命更彻底的失败。"
+ target_is_communist_country:0"$TRIGGER_FAIL$目标已经是我们的同志了，无需进行罢工运动。"
+
+ operation_communist_revolution.1:0"暗中援助"
+ operation_communist_revolution.1.name:0"暗中援助"
+ operation_communist_revolution.1.desc:0"我们的特工已经大致确定了一批拥有斗争思想但实力不足的无产阶级群众，我们现在可以对他们进行一定的物资援助和思想指导。"
+ operation_communist_revolution.2:0"激发矛盾"
+ operation_communist_revolution.2.name:0"激发矛盾"
+ operation_communist_revolution.2.desc:0"已经找到了合适的时机掀起工人罢工运动，以确保目标国内无产阶级革命的成功。"
+ operation_communist_revolution.3:0"工人运动"
+ operation_communist_revolution.3.name:0"工人运动"
+ operation_communist_revolution.3.desc:0"目标国内的工人罢工运动已经到达了一触即发的状态，我们可以随时下达行动指令！"
+ operation_communist_revolution.4:0"大规模罢工"
+ operation_communist_revolution.4.name:0"大规模罢工"
+ operation_communist_revolution.4.desc:0"我们已经成功让目标国发生了无产阶级革命，现在目标国内已经聚集了大批无产阶级群众，正等待我们的指令！"
+ operation_communist_revolution.4.a:0"勇敢的起来，骄傲的起来，要为了工人的事业去战斗！"
+ operation_communist_revolution.5:0"大规模罢工"
+ operation_communist_revolution.5.name:0"大规模罢工"
+ operation_communist_revolution.5.desc:0"不知为何，国内的工人突然开始了罢工运动，他们成群结队地从工厂出来，还高喊着§R“全银河无产阶级，联合起来！”§!的口号\n\n他们似乎无惧威胁，我们已经派出了部分警察来维持秩序，抓了好几批人，但这显然这还不够，似乎愈演愈烈。\n\n大量工厂停产，我们必须做点什么！"
+ operation_communist_revolution.5.a:0"一群乌合之众，不理也罢！"
+ operation_communist_revolution.5.b:0"派遣更多部队镇压！"
+ operation_communist_revolution.5.c:0"真是响亮的口号，或许...是我们一直做错了呢？"
+ operation_communist_revolution.5.d:0"我们已经是社会主义国家了！"
+
+ operation_communist_revolution.6:0"矛盾激化"
+ operation_communist_revolution.6.name:0"矛盾激化"
+ operation_communist_revolution.6.desc:0"由于我们对罢工行动的放任，我们的阶级矛盾已经彻底激化，在未来很长的一段时间内我们的生产将会受到无产阶级的阻挠。"
+ operation_communist_revolution.6.a:0"一群刁民!"
+
+ operation_communist_revolution.7:0"罢工失败"
+ operation_communist_revolution.7.name:0"罢工失败"
+ operation_communist_revolution.7.desc:0"由于我们对罢工行动的大力镇压，我们成功打击了这群无产阶级刁民的嚣张气焰。"
+ operation_communist_revolution.7.a:0"现在我看看还有哪个想死的刁民"
+
+ operation_communist_revolution.8:0"革命再起"
+ operation_communist_revolution.8.name:0"革命再起"
+ operation_communist_revolution.8.desc:0"我们虽然成功的镇压了这次的罢工，但这群刁民看来并不懂得什么叫做感恩，他们居然齐聚在了一颗我们不知道的星球上，摧毁了我们当地的政府，居然建立了反动政权发起叛乱，简直不可理喻！"
+ operation_communist_revolution.8.a:0"一定是有境外势力！"
+
+ operation_communist_revolution.9.desc:0 "同志们！这里是来自[From.GetName]的通讯，我们已经爆发了革命，建立了属于我们自己的公社。资产阶级匪帮和法西斯主义者很有可能准备将我们绞杀在襁褓之中，我请求各位同志来援助我们，社会主义革命万岁！"
+ operation_communist_revolution.9.a:0 "为了共产主义事业！"
+
+ operation_communist_revolution.10.desc:0 "同志们！希望我们到达的正是时候，全银河的无产者们正在向这里前进，让我们打倒资产阶级匪帮和法西斯匪帮，共产主义万岁！"
+ operation_communist_revolution.10.a:0 "前进，星际纵队的战士们！"
+
+#国际纵队以公社名字
+ Commune:0 "公社"
+ NAME_communist_revolution_war:0 "共产主义革命"
+ NAME_international_fleet:0"星际纵队"
+ NAME_communist_proletarian_destoryer:0"无产者级"
+ NAME_communist_proletarian_Cruiser:0"无产者级"
+ NAME_communist_proletarian_battleship:0"无产者级"
+
+#修正
+ communist_revolution_are_being_considered:0"共产主义运动正在兴起"
+ communist_movement_is_developing:0"共产主义运动正在发展"
+ communist_revolution_was_failed:0"共产主义运动被镇压了！"

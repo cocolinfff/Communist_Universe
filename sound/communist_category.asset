@@ -1,0 +1,28 @@
+
+################## EFFECTS ########################
+
+category = {
+	name = "Effects"
+	soundeffects = {
+		####### EVENTS SFX
+		event_communist_international_call
+		event_communist_fall_of_soviet_union
+		event_communist_revolution_success
+		event_communist_automation
+		event_bolshevik
+		event_rebuild_red_army
+		event_glorious_guide
+		event_communist_prometheus
+		event_communist_time_go
+	}
+	
+	compressor =  {
+		enabled = yes
+		pregain = 4.0
+		postgain = -2.2
+		ratio = 3.0
+		threshold = -25
+		attacktime = 0.30
+		releasetime = 0.8
+	}
+}

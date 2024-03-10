@@ -1,0 +1,15 @@
+﻿l_simp_chinese:
+
+ communist_start.0.name:0 "共产星际控制面板"
+ communist_start.0.desc:0 "你可以在这里对§L共产星际§!的一些设定进行修改与控制。"
+ #communist_notice.1.news:0 ""
+ communist_notice.0.ascension_perks:0 "[this.communistAscensionPerks]"
+
+ communist_notice.1.ascension_perks.tooltip:0 "§L§!"
+ communist_notice.1.ascension_perks_notice.tooltip:0 "§R这一条设置在开局后将无法更改！§!\n§H请注意：§!修改后的§Y$ap_the_flesh_is_weak$§!需要§Y$ap_engineered_evolution$§!作为前置。"
+ communist_notice.1.educated:0 "[this.communistEducated]"
+ communist_notice.1.return:0 "回到设置"
+
+ communist_notice.2.name:0 "写给各位读者的一封信：2024/1/30"
+ communist_notice.2.desc:0 "你好啊，亲爱的同志，自从我在2022年写过一次该mod的修复后该mod长期处于停滞状态，到了2023年的时候消逝的记忆（原作者）对该mod进行了重置，删除了一部分可玩内容。后来消逝的记忆前往德国工作，放弃先锋队理念转向卢森堡派，我平常忙于学习且技艺不精，很难进行更新，不过到了2024年情况有了转机，一位新加入的modder缓解了人手不足的问题，我的学习压力有了一定的减轻，所以我们决定再次更新mod，这次我们尽量保证不是年更。\n至于我（平等主义刁民）是怎么走向学习共产主义的道路的，这说来话长，因为特殊原因，在2022年我来到农村呆了半年，在那里我看到了到了当今衰亡的农村，包括但不限于一天十块钱的收入（一年平均下来），发个电子红包都需要别人教的老年人，在村子广场生锈且无法使用的的健身器材。这给我留下了很深的印象。当我把这种情况给别的同学说的时候，同学都觉得不可能，有的人还说：村子里大爷大妈都利用手机直播呢，手机用的比年轻人还花。（沉默）"
+ communist_notice.2.a:0 "也谢谢你看我讲了这么长一段废话...谢谢"

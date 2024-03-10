@@ -1,0 +1,11 @@
+spriteTypes = {	
+	############################
+	### ASCENSION PERK ICONS ###
+	############################
+	
+	spriteType = {
+		name = "GFX_ap_communist_galaxy_lighthouse"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_communist_galaxy_lighthouse.dds"
+		alwaystransparent = yes
+	}
+}

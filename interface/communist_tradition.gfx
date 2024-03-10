@@ -1,0 +1,453 @@
+
+spriteTypes = {	
+	#改造传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_transform"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_transform.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_transform"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_transform.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_transform"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_adaptability.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_transform_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_transform_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_transform_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_transform_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_transform_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_transform_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_transform_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_transform_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_transform_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_transform_5.dds"	
+	}
+
+	#联合传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_unite"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_unite.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_unite"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_unite.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_unite"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_diplomacy.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_unite_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_unite_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_unite_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_unite_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_unite_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_unite_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_unite_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_unite_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_unite_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_unite_5.dds"	
+	}
+
+	#远视传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_science"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_science.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_science"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_science.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_science"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_science_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_science_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_science_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_science_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_science_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_science_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_science_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_science_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_science_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_science_5.dds"	
+	}
+
+	#行政传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_administration"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_administration.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_administration"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_administration.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_administration"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_domination.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_administration_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_administration_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_administration_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_administration_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_administration_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_administration_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_administration_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_administration_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_administration_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_administration_5.dds"	
+	}
+
+	#扩张传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_expansion"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_expansion.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_expansion"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_expansion.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_expansion"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_expansion.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_expansion_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_expansion_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_expansion_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_expansion_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_expansion_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_expansion_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_expansion_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_expansion_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_expansion_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_expansion_5.dds"	
+	}
+
+	#道德传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_morality"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_morality.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_morality"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_morality.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_morality"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_harmony.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_morality_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_morality_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_morality_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_morality_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_morality_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_morality_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_morality_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_morality_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_morality_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_morality_5.dds"	
+	}
+
+	#计划传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_plan"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_plan.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_plan"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_plan.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_plan"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_mercantile.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_plan_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_plan_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_plan_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_plan_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_plan_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_plan_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_plan_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_plan_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_plan_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_plan_5.dds"	
+	}
+
+	#建设传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_build"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_build.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_build"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_build.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_build"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_prosperity.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_build_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_build_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_build_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_build_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_build_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_build_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_build_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_build_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_build_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_build_5.dds"	
+	}
+
+	#肃反传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_spy"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_spy.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_spy"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_spy.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_spy"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_subterfuge.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_spy_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_spy_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_spy_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_spy_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_spy_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_spy_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_spy_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_spy_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_spy_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_spy_5.dds"	
+	}
+
+	#革命传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_revolution"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_revolution.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_revolution"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_revolution.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_revolution"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_supremacy.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_revolution_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_revolution_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_revolution_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_revolution_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_revolution_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_revolution_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_revolution_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_revolution_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_revolution_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_revolution_5.dds"	
+	}
+
+	#斗争传统
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_communist_struggle"
+		texturefile = "gfx/interface/tiles/tradition_category_tile_communist_struggle.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_communist_struggle"
+		texturefile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_communist_struggle.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_communist_struggle"
+		texturefile = "gfx/interface/traditions/tradition_hex_bg_unyielding.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_struggle_1"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_struggle_1.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_struggle_2"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_struggle_2.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_struggle_3"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_struggle_3.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_struggle_4"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_struggle_4.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_tr_communist_struggle_5"
+		texturefile = "gfx/interface/icons/traditions/tr_communist_struggle_5.dds"	
+	}
+}

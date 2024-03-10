@@ -1,0 +1,20 @@
+entity = {
+	name = "communist_food_factory_entity_1"
+	pdxmesh = "interstellar_assembly_01_stage_1_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_speed = 0.2  
+#		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+	}
+	scale = 3.5
+}
+
+entity = {
+	name = "communist_food_factory_entity"
+	
+	locator = { name = "root"	position = { 0 20 0 } rotation = { 0 0 0 } }
+	attach = { root = "communist_food_factory_entity_1" }	
+
+}

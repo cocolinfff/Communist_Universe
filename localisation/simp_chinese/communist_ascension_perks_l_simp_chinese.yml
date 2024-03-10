@@ -1,0 +1,5 @@
+﻿#飞升天赋
+l_simp_chinese:
+ ap_communist_galaxy_lighthouse:0 "银河灯塔"
+ ap_communist_galaxy_lighthouse_desc:0 "至今一切社会的历史都是阶级斗争的历史。星海中如此之多的无产者被镣铐束缚，却又因各种各样的阻碍而无法团结在一起，作为暂时胜利者的我们决不能停下革命的脚步，此后如竟没有炬火，我便是唯一的光。§H允许建造社会主义奇观：§!§R塔特林塔§!"
+ communist_galaxy_lighthouse_tooltip:0 "§H允许组建联邦类型：§!§R共产星际§!"

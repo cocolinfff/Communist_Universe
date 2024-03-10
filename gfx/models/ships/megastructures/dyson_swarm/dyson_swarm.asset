@@ -1,0 +1,6 @@
+entity = {
+	name = "dyson_swarm_entity"
+	pdxmesh = "dyson_swarm_mesh"
+	
+	scale = 300.0
+}

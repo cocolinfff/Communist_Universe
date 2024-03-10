@@ -1,0 +1,27 @@
+category = {
+ name = "Effects"
+ soundeffects = {
+			relic_internationale
+ }
+}
+
+
+sound = 
+{
+    name = "relic_internationale"
+    file = "relic_internationale.wav"
+    volume = 1
+}
+
+ soundeffect =
+{
+    name = "relic_internationale"
+    volume = 0.5
+    max_audible = 1
+	max_audible_behaviour = fail
+	playbackrate_random_offset = { -10.0 10.0 }
+	fade_out = 10
+    sounds = {
+        sound = relic_internationale
+	}
+}

@@ -1,0 +1,16 @@
+﻿l_simp_chinese:
+
+#星球
+
+#星球特征
+ d_communist_nuclear_power_plant:0 "核电站"
+ d_communist_nuclear_power_plant_desc:0 "建设大量的核电站可以稳定解决我们的能源问题。"
+
+ d_communist_minerals_lode:0 "地心矿脉"
+ d_communist_minerals_lode_desc:0 "这些矿脉的位置深入地表，某种意义上来说永远挖不完。"
+
+ d_communist_food_farm:0 "水培农场"
+ d_communist_food_farm_desc:0 "先进的无土栽培技术可以为我们提供巨量的食物。"
+
+ d_avril_cruiser:0 "阿芙乐尔号巡洋舰"
+ d_avril_cruiser_desc:0 "1917年11月7日，阿芙乐尔的一声炮响诞生了人类历史上第一个社会主义国家。现在，阿芙乐尔号将见证人类驶入星辰大海！"
